@@ -1,4 +1,4 @@
-# HOUSERULES
+# HOUSE RULES
 Social Event Planner and Finder
 
 Android app that allows users to create events (Parties, Game Nights, Movie Nights)
