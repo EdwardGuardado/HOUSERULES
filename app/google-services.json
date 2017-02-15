@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "636840971090",
+    "firebase_url": "https://houserules-5973d.firebaseio.com",
+    "project_id": "houserules-5973d",
+    "storage_bucket": "houserules-5973d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636840971090:android:e821dbd84571351c",
+        "android_client_info": {
+          "package_name": "com.edward.cs48.houserules"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636840971090-3h5gseb4va6utc6f2e0fc5hsq2hng0gq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edward.cs48.houserules",
+            "certificate_hash": "2F08AA443A9FFC51E45947B8F38E03196938A434"
+          }
+        },
+        {
+          "client_id": "636840971090-n6hsubs8nmuf8nh7jrk7ksbmsc2sd4mq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDppkznhFBbRUA5sr39I0ZT3W4yhsciGbY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636840971090-n6hsubs8nmuf8nh7jrk7ksbmsc2sd4mq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
