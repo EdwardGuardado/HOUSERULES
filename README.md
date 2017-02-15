@@ -1,4 +1,5 @@
 # HOUSERULES
+# Eddie Is GAY
 Social Event Planner and Finder
 
 Android app that allows users to create events (Parties, Game Nights, Movie Nights)
@@ -27,5 +28,5 @@ Strong GPS features over simple maps locations
 Eddie: Edwardguardado@umail.ucsb.edu
 Daniel : dwchojnacki@umail.ucsb.edu
 Roberto: roberto.nares@gmail.com
-giovannidominguez@umail.ucsb.edu
+Giovanni: giovannidominguez21@gmail.com
 Art: arturo@umail.ucsb.edu
