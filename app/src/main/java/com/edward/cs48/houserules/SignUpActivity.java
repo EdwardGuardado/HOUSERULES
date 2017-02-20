@@ -2,12 +2,17 @@ package com.edward.cs48.houserules;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.annotation.NonNull;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+import android.util.Log;
+import android.text.TextUtils;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -16,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private static final String TAG = "SignupActivity" ;
+    private static final String TAG = "SignUpActivity" ;
     private Button btnSignUp,btnLinkToLogIn;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
@@ -51,7 +56,7 @@ public class SignUpActivity extends AppCompatActivity {
         btnLinkToLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -74,7 +79,7 @@ public class SignUpActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         //create user
         auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(SignupActivity.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG,"createUserWithEmail:onComplete:" + task.isSuccessful());
@@ -86,7 +91,7 @@ public class SignUpActivity extends AppCompatActivity {
                             Log.d(TAG,"Authentication failed." + task.getException());
  
                         } else {
-                            startActivity(new Intent(SignupActivity.this, UserActivity.class));
+                            startActivity(new Intent(SignUpActivity.this, UserActivity.class));
                             finish();
                         }
                     }
