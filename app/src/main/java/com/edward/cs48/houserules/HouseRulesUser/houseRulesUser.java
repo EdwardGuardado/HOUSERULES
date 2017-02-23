@@ -8,11 +8,9 @@ import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
  */
 
 public class houseRulesUser {
-    private String firstName;
-    private String lastName;
+    private String fullName;
     private String screenName;
     private String email;
-    private String password;
     private Boolean isHost;
 
 
@@ -27,33 +25,38 @@ public class houseRulesUser {
     private ArrayList<houseRulesEvent> attendEventList = new ArrayList<houseRulesEvent>();
 
     public houseRulesUser() {
-        this.firstName = "";
-        this.lastName = "";
+        this.fullName="";
         this.screenName = "";
         this.email = "";
-        this.password = "";
         this.hostEventNum = 0; // Host specific feature
         this.attendEventNum = 0; // Attendee specific feature
     }
 
-    public houseRulesUser(String firstName, String lastName, String screenName, String email, String password) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public houseRulesUser(String fullName, String screenName, String email) {
+        this.fullName=fullName;
         this.screenName = screenName;
         this.email = email;
-        this.password = password;
         this.hostEventNum = 0; // Host specific feature
         this.attendEventNum = 0; // Attendee specific feature
     }
 
-    public String getFirstName() { return this.firstName; }
-    public String getLastName() { return this.lastName; }
+    public String getFullName(){return this.fullName;}
     public String getScreenName() { return this.screenName; }
     public String getEmail() { return this.email; }
-    public String getPassword() { return this.password; }
     public int getHostEventNum() { return this.hostEventNum; } // Host specific feature
     public int getAttendEventNum() { return this.attendEventNum; } // Attendee specific feature
-    public void setPassword(String newPassword) { this.password = newPassword; }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setScreenName(String screenName) {
+        this.screenName = screenName;
+    }
 
     public void addHostEvent(houseRulesEvent newHostEvent) { // Host specific feature
         hostEventList.add(newHostEvent);
