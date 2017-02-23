@@ -13,8 +13,6 @@ public class houseRulesUser {
     private String screenName;
     private String email;
     private String password;
-    private Boolean isHost;
-
 
     // Number of events a user is host of
     private int hostEventNum; // Host specific feature

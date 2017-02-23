@@ -18,8 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8"/>
+            android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8" />
+
+        <activity android:name=".activity_create_event"></activity>
     </application>
+
 </manifest>
