@@ -33,7 +33,7 @@ public class activity_create_event extends AppCompatActivity {
         makePublic = (CheckBox) findViewById(R.id.event_privacy);
         createEventBtn = (Button) findViewById(R.id.submit_btn);
 
-        
+
 
 
     }

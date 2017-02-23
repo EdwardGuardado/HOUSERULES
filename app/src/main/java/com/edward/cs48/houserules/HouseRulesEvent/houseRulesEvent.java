@@ -1,15 +1,19 @@
 package com.edward.cs48.houserules.HouseRulesEvent;
 
+import android.widget.EditText;
+
 /**
  * Created by Edward on 2/18/17.
  */
+
+
 
 public class houseRulesEvent {
     private String name;
     private String address;
     private String date;
     private String time;
-    private String houseRules;
+    private EditText houseRules;
     private boolean privacy;
 
 
@@ -18,7 +22,7 @@ public class houseRulesEvent {
         this.address = "";
         this.date = "";
         this.time = "";
-        this.houseRules = "";
+        this.houseRules.setText("Add your house rules");
         this.privacy = false;
     }
 
@@ -27,7 +31,7 @@ public class houseRulesEvent {
         this.address = address;
         this.date = date;
         this.time = time;
-        this.houseRules = houseRules;
+        this.houseRules.setText("Add your house rules");
         this.privacy = privacy;
     }
 
@@ -47,7 +51,7 @@ public class houseRulesEvent {
         this.time = newTime;
     }
 
-    public void setHouseRules(String newHouseRules) {
+    public void setHouseRules(EditText newHouseRules) {
         this.houseRules = newHouseRules;
     }
 
@@ -71,7 +75,7 @@ public class houseRulesEvent {
         return this.time;
     }
 
-    public String getHouseRules() {
+    public EditText getHouseRules() {
         return this.houseRules;
     }
 

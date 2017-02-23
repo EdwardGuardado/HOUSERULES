@@ -10,10 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import android.support.v4.app.FragmentActivity;
+import com.google.android.gms.location.places.*;
 
-
-public class MainActivity extends FragmentActivity implements OnConnectionFailedListener{
+public class MainActivity extends AppCompatActivity implements OnConnectionFailedListener{
     private GoogleApiClient mGoogleApiClient;
 
 
@@ -33,7 +32,7 @@ public class MainActivity extends FragmentActivity implements OnConnectionFailed
             }
         });
 
-        mGoogleApiClient = new GoogleApiClient
+        GoogleApiClient mGoogleApiClient = new GoogleApiClient
                 .Builder(this)
                 .addApi(Places.GEO_DATA_API)
                 .addApi(Places.PLACE_DETECTION_API)

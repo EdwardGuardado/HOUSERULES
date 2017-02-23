@@ -1,4 +1,4 @@
-package com.edward.cs48.houserules;
+/*package com.edward.cs48.houserules;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
  
     /**
      * Validating form
-     */
+
     private void submitForm() {
         String email = loginInputEmail.getText().toString().trim();
         String password = loginInputPassword.getText().toString().trim();
@@ -148,3 +148,4 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
     }
 }
+*/
