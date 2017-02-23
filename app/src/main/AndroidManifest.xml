@@ -18,6 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".LoginActivities.AuthenticationActivity"
             android:label="@string/app_name"
@@ -28,8 +29,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+=======
+
+>>>>>>> 7cf7d2e81a964bb904042569646c3cae8233a171
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8"/>
+            android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8" />
+
+        <activity android:name=".activity_create_event"></activity>
     </application>
+
 </manifest>

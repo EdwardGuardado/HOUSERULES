@@ -15,11 +15,19 @@
       },
       "oauth_client": [
         {
+          "client_id": "636840971090-a9cq4d0gbuda91mjuc8dirqcqq4pdjta.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.edward.cs48.houserules",
+            "certificate_hash": "28458b708a76f8b87cdf374049577c46a7804225"
+          }
+        },
+        {
           "client_id": "636840971090-3h5gseb4va6utc6f2e0fc5hsq2hng0gq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.edward.cs48.houserules",
-            "certificate_hash": "2F08AA443A9FFC51E45947B8F38E03196938A434"
+            "certificate_hash": "2f08aa443a9ffc51e45947b8f38e03196938a434"
           }
         },
         {
