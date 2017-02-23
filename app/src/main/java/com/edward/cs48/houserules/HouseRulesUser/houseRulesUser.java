@@ -5,4 +5,5 @@ package com.edward.cs48.houserules.HouseRulesUser;
  */
 
 public class houseRulesUser {
+    houseRulesUser
 }
