@@ -754,7 +754,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bcf4037cf8db8e217a5746cb3fc2c5cea8a945c7">
+        sha1="530a38cafc0abe50c85c3c1fb86331f304b16dda">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e9364d6c1021ef3b66744ce4a8447553f1cd0fb7/classes.dex" />
     </item>
     <item
