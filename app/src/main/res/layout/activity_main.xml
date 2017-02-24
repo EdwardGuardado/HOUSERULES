@@ -5,7 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_collapseParallaxMultiplier="1.0"
-    android:gravity="center">
+    android:gravity="center"
+    android:weightSum="1">
+
+    <ImageButton
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="?android:attr/textSelectHandle"
+        android:id="@+id/sign_out"
+        android:layout_weight="0.42" />
 
     <Button
         android:text="Create an Event"

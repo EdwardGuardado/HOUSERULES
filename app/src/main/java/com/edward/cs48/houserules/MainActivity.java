@@ -2,12 +2,18 @@ package com.edward.cs48.houserules;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
 import com.edward.cs48.houserules.R;
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
@@ -19,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCreateEvent, btnMyEvents, btnMyInvites;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
+
+    private ImageButton sign_out;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,26 @@ public class MainActivity extends AppCompatActivity {
         btnCreateEvent = (Button) findViewById(R.id.button_create_event);
         btnMyEvents = (Button) findViewById(R.id.button_my_events);
         btnMyInvites = (Button) findViewById(R.id.button_my_invites);
+        sign_out = (ImageButton) findViewById(R.id.sign_out);
+
+        sign_out.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.sign_out) {
+                    AuthUI.getInstance()
+                            .signOut(MainActivity.this)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    // user is now signed out
+                                    startActivity(new Intent(MainActivity.this, AuthenticationActivity.class));
+                                    finish();
+                                }
+                            });
+                }
+            }
+        });
+
+
 
         /*btnCreateEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         });
         */
     }
+
 
     @Override
     protected void onResume() {
