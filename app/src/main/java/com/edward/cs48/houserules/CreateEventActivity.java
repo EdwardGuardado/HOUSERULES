@@ -21,7 +21,6 @@ public class CreateEventActivity extends AppCompatActivity {
     Calendar dateTime = Calendar.getInstance();
     private EditText eventName;
     private EditText eventAddress;
-    private EditText eventDescription;
     private EditText eventDate;
     private EditText eventTime;
     private EditText eventRules;
@@ -34,7 +33,6 @@ public class CreateEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_event);
 
         eventName = (EditText) findViewById(R.id.event_name);
-        eventDescription = (EditText) findViewById(R.id.event_description);
         eventAddress = (EditText) findViewById(R.id.event_address);
         eventDate = (EditText) findViewById(R.id.event_date);
         eventTime = (EditText) findViewById(R.id.event_time);
