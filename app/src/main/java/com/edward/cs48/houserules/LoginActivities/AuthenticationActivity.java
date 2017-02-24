@@ -60,8 +60,6 @@ public class AuthenticationActivity extends AppCompatActivity {
 
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
-                user.setEmail(auth.getCurrentUser().getEmail());
-                user.setFullName(auth.getCurrentUser().getDisplayName());
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return;
