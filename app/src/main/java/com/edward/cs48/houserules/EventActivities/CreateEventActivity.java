@@ -39,13 +39,14 @@ public class CreateEventActivity extends AppCompatActivity {
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
+   // private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event);
 
+/*
         eventName = (EditText) findViewById(R.id.event_name);
         eventAddress = (EditText) findViewById(R.id.event_address);
         eventDate = (EditText) findViewById(R.id.event_date);
@@ -53,18 +54,20 @@ public class CreateEventActivity extends AppCompatActivity {
         eventRules = (EditText) findViewById(R.id.event_rules);
         makePublic = (CheckBox) findViewById(R.id.event_privacy);
         createEventBtn = (Button) findViewById(R.id.submit_btn);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+*/
     }
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
+
+    /*
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("CreateEvent Page") // TODO: Define a title for the content shown.
@@ -77,14 +80,16 @@ public class CreateEventActivity extends AppCompatActivity {
                 .build();
     }
 
+    */
+
     @Override
     public void onStart() {
         super.onStart();
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+        //client.connect();
+        //AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
 
     @Override
@@ -93,8 +98,8 @@ public class CreateEventActivity extends AppCompatActivity {
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
+        //AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        //client.disconnect();
     }
 
     @Override
@@ -107,4 +112,5 @@ public class CreateEventActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

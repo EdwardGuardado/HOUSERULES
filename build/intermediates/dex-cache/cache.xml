@@ -3,30 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_b55750f5824445306cf2bfec856f3fb049d00035/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="8e1d31656bc9f1889283836e025e6cb703acd38a">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-10.2.0_f3d7b780714d9f643a82bd89332fe45273f9c574/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_4a3f45eaad131c6c7ca8f08039b12175adeb60fe/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,39 +30,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_21d4600851bd8ec7a71e7528d003b1c765af7cf8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca82d5800780b1d53f0f9ab43678d8634a34cddc">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-10.2.0_7faa329609233cc9bd31f866ddeb262bbb09278d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-composer/2.3.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="895c63ba9782b04f0c5da69205216f6ec87119eb">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.twitter.sdk.android-tweet-composer-2.3.0_9be08d89b4335baf89dff00e38e6cd6ae8043e85/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1bab75be1918fc9871be4da7afe38d7e4d308303">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-10.2.0_a8c7b3cd6bc52f103bb9a978864f44dc9c634680/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -99,15 +54,6 @@
         revision="25.0.2"
         sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.2.0_2becc851b1317b5a6c5aebfd3d9ff4c6b386a3b3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.19.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c6047a34af07d6ec4e950ba1dc70ce23ac65ecaa">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.19.0_05d65d8aa5e0c1431244231d65ecf477c1b860f3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -156,15 +102,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7d14fe9bd2283b2eb7fcab08458aa0357917e138">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-10.2.0_7dd89657b4c7b70d761ed3d8cf27e773cc3adc95/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="true"
         optimize="true"
@@ -189,24 +126,6 @@
         revision="25.0.2"
         sha1="6da05b7498da036b5b37c3beb861cd2060929dcd">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-10.2.0_53ed128c309b72b29b3478681d4b1489807952cc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="101393e975eaf36e3ff40b277ee9a019e077afef">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-10.2.0_63584160b622f8f8baddfa0213f2165971e41c87/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_78c293b6949b56808643690cbc0f944615f517b6/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -246,30 +165,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="db48dfabe8ecc46681ceca418d6bd61a5339f818">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-10.2.0_c06b6b4f864c4f4761ba0905b6f7eb6bd223b40d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="421a5cebe9ff187c98075c59786e9464c5c67d36">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-10.2.0_cefe8f83288143b1f64146a1ca75c80e1c7e002e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.2.0_63f52cbb1f5240292680c8e352600c3eb4c24e92/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -282,30 +183,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a3f7595ca32e614b454ceb7b7e241bb037a28e86">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-10.2.0_d7a2b27deee80e816b2be68bef342efd770fed62/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.6.1/86b122e640af09b0723e1fa44083c354ba6d9089/glide-3.6.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="86b122e640af09b0723e1fa44083c354ba6d9089">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.6.1_b597103c29e0a142f074a105f3eaaa1e24b7534d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="74c5a91d6510ad42410e8a047d90d2ea6721a0e0">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-10.2.0_e386f41fee9b90c37b423de12c8460f64bc5e948/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -372,6 +255,303 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/customtabs/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0558e5b6c171bd6719581340f9ac6be4af5ae265">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-customtabs-25.1.1_1581dc112d0079a5eb7cb1ec7f389a82c8aaa084/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="654b294d429b56fd18392f2b68ad79954f431f8e">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-10.2.0_9b2c45357469c518a4e9f378505b72c2762e3278/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_5ee609e0dbb09c781abc18cc815170c08411d98b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.1_bc52611339935704294f60948c4c0a3a9124e291/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.1_b98adbccd7c38a0afef39e07d8aca511d130cd56/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_b69650ab7ede70a0d68abef639eee6fbe3cf1517/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_70989009c4a5b4c1f35a2fb6ffc4236197d3182f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_fe50ad6dca72e4c4bb5fadbeb01184cebacd3b9a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-10.2.0_1b3170d97c02d2d8a0fee0b247c639a6d0982756/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_ff21f53acffc611b6090761695a7dcd52292a43a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4e01b82d664e1a8253b2b9658e74b5da35c8771d">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.2.0_36e639ecfdfdfd79c5f2dfe24454fad6d70c6160/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="423fb69e69759d8b726fa4a4fb6a1ea9fc86d1cd">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-10.2.0_b9a7261534571364fced345caddfc62a13340c53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/1.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1395232a7eddc612029353b3c953cb0fced71076">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.firebaseui-firebase-ui-auth-1.2.0_a46f86797168f9f11e7d71ca425de70bf9385390/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.2.0_7d92cf2696ee134096c48717a2836629057db42e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3aaf1e7b5fe9f4d3ff22c4edc0ead631f7389d30">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-10.2.0_7db5d8d39449f1dcb4793a403f0ce41d242c38d2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7157a9577c983651d6c6ee313813424fe2d8ab6">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-10.2.0_c1c36e506fc953e14af7fa3671d12904fa0dceae/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_a5754634cd5186a4b78721a96c1a1fc5e381fbe7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.1_0cf757de7965f9aaee831cf7af1fe83e3aeca457/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45e0953544711e0b5a2d227732e88cccb82793bc">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-10.2.0_d96653ac05210001fb442da423124309d26b4ec5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-1.3.0_0eb5ea2c1d3d3c0adbd713b0aa18ec6cdfebef61/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.1_b55750f5824445306cf2bfec856f3fb049d00035/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.1.1_4a3f45eaad131c6c7ca8f08039b12175adeb60fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.0.2/f8d87f15b94b8d74e7ccf61d7eedb558811cdb30/converter-gson-2.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f8d87f15b94b8d74e7ccf61d7eedb558811cdb30">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.0.2_21d4600851bd8ec7a71e7528d003b1c765af7cf8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca82d5800780b1d53f0f9ab43678d8634a34cddc">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-10.2.0_7faa329609233cc9bd31f866ddeb262bbb09278d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1bab75be1918fc9871be4da7afe38d7e4d308303">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-10.2.0_a8c7b3cd6bc52f103bb9a978864f44dc9c634680/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.19.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c6047a34af07d6ec4e950ba1dc70ce23ac65ecaa">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.facebook.android-facebook-android-sdk-4.19.0_05d65d8aa5e0c1431244231d65ecf477c1b860f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7d14fe9bd2283b2eb7fcab08458aa0357917e138">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-10.2.0_7dd89657b4c7b70d761ed3d8cf27e773cc3adc95/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="101393e975eaf36e3ff40b277ee9a019e077afef">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-10.2.0_63584160b622f8f8baddfa0213f2165971e41c87/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_78c293b6949b56808643690cbc0f944615f517b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="db48dfabe8ecc46681ceca418d6bd61a5339f818">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-10.2.0_c06b6b4f864c4f4761ba0905b6f7eb6bd223b40d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.2.0_63f52cbb1f5240292680c8e352600c3eb4c24e92/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a3f7595ca32e614b454ceb7b7e241bb037a28e86">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-10.2.0_d7a2b27deee80e816b2be68bef342efd770fed62/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="74c5a91d6510ad42410e8a047d90d2ea6721a0e0">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-10.2.0_e386f41fee9b90c37b423de12c8460f64bc5e948/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -385,7 +565,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0bfa6560f7cb0fbe1da08e4ff69e01037ecebd82">
+        sha1="83cb47c045692c178562931288a5ad5259982dfa">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_253090b15dbb98db7885945a5422f85bcee1c720/classes.dex" />
     </item>
     <item
@@ -396,15 +576,6 @@
         revision="25.0.2"
         sha1="8438c64f9eb581429dc592f7c9b3156a3d071653">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-v4-impl-10.2.0_caab5af7643bb920cb962255da2aa4d94624b240/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/customtabs/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0558e5b6c171bd6719581340f9ac6be4af5ae265">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-customtabs-25.1.1_1581dc112d0079a5eb7cb1ec7f389a82c8aaa084/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -444,15 +615,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="654b294d429b56fd18392f2b68ad79954f431f8e">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-10.2.0_9b2c45357469c518a4e9f378505b72c2762e3278/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -468,15 +630,6 @@
         revision="25.0.2"
         sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.1.1_12401e0dd597d917e8b47b221a9c853eb2f90a3e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.1.1_5ee609e0dbb09c781abc18cc815170c08411d98b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -525,33 +678,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a8ae156c2726ac9c56daaf4b49452ec2cdb7bba9">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.1_bc52611339935704294f60948c4c0a3a9124e291/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.1.1_b98adbccd7c38a0afef39e07d8aca511d130cd56/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.1.1_b69650ab7ede70a0d68abef639eee6fbe3cf1517/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -561,48 +687,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.1.1_70989009c4a5b4c1f35a2fb6ffc4236197d3182f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_fe50ad6dca72e4c4bb5fadbeb01184cebacd3b9a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="ddb7fed808f4331174b59428ccfc46b3696c9812">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-10.2.0_b8447a4d8d77b6ac955a127cf879aa0d6ff83503/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="857ce7350acf811749c8fd0254d3d39b02aa71f5">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-10.2.0_1b3170d97c02d2d8a0fee0b247c639a6d0982756/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.1.1_ff21f53acffc611b6090761695a7dcd52292a43a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -624,66 +714,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4e01b82d664e1a8253b2b9658e74b5da35c8771d">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.2.0_36e639ecfdfdfd79c5f2dfe24454fad6d70c6160/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="423fb69e69759d8b726fa4a4fb6a1ea9fc86d1cd">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-10.2.0_b9a7261534571364fced345caddfc62a13340c53/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="a61e7010aa7be5da53cd1bc5279630510c9a4912">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.2.0_78f771c99cacdac67fbfb178eafff8c7724ed59e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.firebaseui/firebase-ui-auth/1.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1395232a7eddc612029353b3c953cb0fced71076">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.firebaseui-firebase-ui-auth-1.2.0_a46f86797168f9f11e7d71ca425de70bf9385390/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ce9112e08a027c8620ae693983e38cdbb9f6371b">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.2.0_7d92cf2696ee134096c48717a2836629057db42e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3aaf1e7b5fe9f4d3ff22c4edc0ead631f7389d30">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-10.2.0_7db5d8d39449f1dcb4793a403f0ce41d242c38d2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e7157a9577c983651d6c6ee313813424fe2d8ab6">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-10.2.0_c1c36e506fc953e14af7fa3671d12904fa0dceae/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -696,33 +732,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.1/b9d63507329a7178e026fc334f87587ee5070ac5/gson-2.6.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b9d63507329a7178e026fc334f87587ee5070ac5">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.6.1_a5754634cd5186a4b78721a96c1a1fc5e381fbe7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.1.1_0cf757de7965f9aaee831cf7af1fe83e3aeca457/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45e0953544711e0b5a2d227732e88cccb82793bc">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-10.2.0_d96653ac05210001fb442da423124309d26b4ec5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -732,30 +741,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/1.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ac6948cce36f694f3eb3d73a135e298dc4b3527a">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-1.3.0_0eb5ea2c1d3d3c0adbd713b0aa18ec6cdfebef61/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_6a4bb99059bb52469dbe26d9aaf035cec8f0b9dc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="eee799ff5c829d8da5032456b025a0d2b9c5311c">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e9364d6c1021ef3b66744ce4a8447553f1cd0fb7/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -774,6 +765,15 @@
         revision="25.0.2"
         sha1="0d5cbbbfe040201c7569478b70a13b58fd11aab4">
         <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.2.0_a5c26c5c827662e89103be0d0ca076920946b1d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf854feb14f7e79732271ad9f394096797285d0c">
+        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e9364d6c1021ef3b66744ce4a8447553f1cd0fb7/classes.dex" />
     </item>
 
 </items>
