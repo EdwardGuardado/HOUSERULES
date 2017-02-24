@@ -1,4 +1,4 @@
-package com.edward.cs48.houserules;
+package com.edward.cs48.houserules.EventActivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,13 +7,14 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+import com.edward.cs48.houserules.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
 
-public class CreateEventActivity extends AppCompatActivity {
+public class CreateEventActivity2 extends AppCompatActivity {
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRef = database.getReference("message");
