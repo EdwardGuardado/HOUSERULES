@@ -26,7 +26,6 @@ public class AuthenticationActivity extends AppCompatActivity {
     private static final String TAG = "AuthenticaitonActivity";
     private static final String FIREBASE_TOS_URL = "https://firebase.google.com/terms/";
     private static final int RC_SIGN_IN = 100;
-    private static houseRulesUser user;
     private ImageView imageView4;
 
     private FirebaseAuth auth;

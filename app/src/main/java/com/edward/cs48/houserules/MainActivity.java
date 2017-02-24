@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,12 +14,19 @@ import android.widget.Button;
 import com.edward.cs48.houserules.EventActivities.CreateEventActivity;
 import com.edward.cs48.houserules.EventActivities.MyEventsActivity;
 import com.edward.cs48.houserules.EventActivities.MyInvitesActivity;
+import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     private Button btnCreateEvent, btnMyEvents, btnMyInvites;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
+
+    private FirebaseAuth auth;
+    private FirebaseUser firebaseUser;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("User Info");
+
 
 
     @Override
@@ -42,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, AuthenticationActivity.class));
             finish();
             return;
-        } else {
-            setContentView(R.layout.activity_main);
         }
         btnCreateEvent = (Button) findViewById(R.id.button_create_event);
         btnMyEvents = (Button) findViewById(R.id.button_my_events);
@@ -98,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     public void signOut(){
                 AuthUI.getInstance()
                         .signOut(MainActivity.this)
@@ -114,4 +128,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
     }
+
 }

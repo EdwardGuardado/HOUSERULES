@@ -22,6 +22,8 @@ public class houseRulesUser {
     private ArrayList<houseRulesEvent> hostEventList = new ArrayList<houseRulesEvent>();
     // List of events of which the user is an attendee of
     private ArrayList<houseRulesEvent> attendEventList = new ArrayList<houseRulesEvent>();
+    //List of events of which the user is invited to
+    private ArrayList<houseRulesEvent> invitedEventList = new ArrayList<houseRulesEvent>();
 
     public houseRulesUser() {
         this.fullName="";
@@ -67,14 +69,21 @@ public class houseRulesUser {
         attendEventNum++;
     }
 
-    public void removeHostEvent(int position) { // Question: How do we get the position index number??
-        hostEventList.remove(position-1);
-        hostEventNum--;
+    public void addInviteEvent(houseRulesEvent newInviteEvent) {
+        invitedEventList.add(newInviteEvent);
     }
 
-    public void removeAttendEvent(int position) {
-        attendEventList.remove(position-1);
+    public void removeAttendEvent (houseRulesEvent newAttendEvent){
+        attendEventList.remove(newAttendEvent);
         attendEventNum--;
+    }
+
+    public void removeHostEvent (houseRulesEvent newHostEvent){
+        hostEventList.remove(newHostEvent);
+        hostEventNum--;
+    }
+    public void removeInviteEvent (houseRulesEvent newInviteEvent){
+        invitedEventList.remove(newInviteEvent);
     }
 
 
