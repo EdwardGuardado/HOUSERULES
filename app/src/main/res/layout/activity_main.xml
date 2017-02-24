@@ -6,7 +6,8 @@
     android:orientation="vertical"
     app:layout_collapseParallaxMultiplier="1.0"
     android:gravity="center"
-    android:weightSum="1">
+    android:weightSum="1"
+    tools:context="com.edward.cs48.houserules.MainActivity">
 
     <Button
         android:text="Create an Event"
