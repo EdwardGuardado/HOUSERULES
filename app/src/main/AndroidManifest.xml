@@ -33,15 +33,15 @@
             android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8" />
 
         <activity
-            android:name=".CreateEventActivity"
+            android:name=".EventActivities.CreateEventActivity"
             android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
         </activity>
         <activity
-            android:name=".MyEventsActivity"
+            android:name=".EventActivities.MyEventsActivity"
             android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
         </activity>
         <activity
-            android:name=".MyInvitesActivity"
+            android:name=".EventActivities.MyInvitesActivity"
             android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
         </activity>
     </application>
