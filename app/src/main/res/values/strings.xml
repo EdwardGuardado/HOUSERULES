@@ -13,4 +13,11 @@
     <string name="err_msg_required">Required !!</string>
     <string name="err_msg_password">Enter a valid password with min 6 characters.</string>
     <string name="btn_link_to_signup">Don\'t have an account, Signup !!</string>
+    <string name="unknown_response">Unexpected onActivityResult response code</string>
+    <string name="unknown_sign_in_response">Unknown response from AuthUI sign-in</string>
+    <string name="sign_in_cancelled">Sign in cancelled</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="signed_in_header">You are signed in!</string>
+    <string name="unknown_error">An unknown error occurred</string>
+    <string name="sign_out">Sign out</string>
 </resources>

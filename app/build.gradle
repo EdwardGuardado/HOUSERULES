@@ -5,6 +5,7 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+    maven { url 'https://maven.fabric.io/public' }
 }
 
 android {
@@ -51,7 +52,7 @@ dependencies {
     compile 'com.google.firebase:firebase-appindexing:10.0.0'
 
 // Firebase UI
-    compile 'com.firebaseui:firebase-ui-database:1.2.0'
+    compile 'com.firebaseui:firebase-ui-auth:1.2.0'
 
 // Testing dependencies
     androidTestCompile 'junit:junit:4.12'
@@ -61,4 +62,3 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
-
