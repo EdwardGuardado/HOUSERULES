@@ -20,24 +20,27 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import static com.edward.cs48.houserules.MainActivity.user;
+
 public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
 
     private static final String TAG = "MyEventsActivity";
+    private ArrayList<String> events = new ArrayList<String>();
+    private ArrayList<houseRulesEvent> eventsHostedUser = user.getHostEventList();
+    private ArrayList<houseRulesEvent> eventsAttendUser = user.getAttendEventList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         //getActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
-        String[] FRUITS = new String[] { "Chess tournament R1","Chess tournament R2",
-                "Chess tournament R3","Chess tournament QuarterFinals","Chess tournament SemiFinals","Chess tournament Championship","DParty","The Rob Concert"};
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
-                FRUITS);
+        setUp();
+        String[] newEvents = events.toArray(new String[events.size()]);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
         setListAdapter(adapter);
     }
 
@@ -63,5 +66,14 @@ public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
     @Override
     protected void onResume(){
         super.onResume();
+    }
+
+    private void setUp(){
+        for ( houseRulesEvent event : eventsHostedUser){
+            events.add(event.getName());
+        }
+        for (houseRulesEvent event : eventsAttendUser){
+            events.add(event.getName());
+        }
     }
 }

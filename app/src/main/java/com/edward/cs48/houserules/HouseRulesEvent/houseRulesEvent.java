@@ -2,19 +2,27 @@ package com.edward.cs48.houserules.HouseRulesEvent;
 
 import android.widget.EditText;
 
+import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
 /**
  * Created by Edward on 2/18/17.
  */
 
 
 
-public class houseRulesEvent {
+public class houseRulesEvent implements Serializable {
     private String name;
     private String address;
     private String date;
     private String time;
     private EditText houseRules;
-    private boolean privacy;
+    private boolean Public;
+    private String HostName;
 
 
     public houseRulesEvent() {
@@ -22,8 +30,7 @@ public class houseRulesEvent {
         this.address = "";
         this.date = "";
         this.time = "";
-        this.houseRules.setText("Add your house rules");
-        this.privacy = false;
+        this.Public = false;
     }
 
     public houseRulesEvent(String name, String address, String date, String time, String houseRules, boolean privacy) {
@@ -31,8 +38,7 @@ public class houseRulesEvent {
         this.address = address;
         this.date = date;
         this.time = time;
-        this.houseRules.setText("Add your house rules");
-        this.privacy = privacy;
+        this.Public = privacy;
     }
 
     public void setName(String newName) {
@@ -56,7 +62,7 @@ public class houseRulesEvent {
     }
 
     public void setPrivacy(boolean newPrivacy) {
-        this.privacy = newPrivacy;
+        this.Public = newPrivacy;
     }
 
     public String getName() {
@@ -80,8 +86,36 @@ public class houseRulesEvent {
     }
 
     public boolean getPrivacy() {
-        return this.privacy;
+        return this.Public;
     }
+
+    private void readObject(ObjectInputStream aInputStream
+    ) throws ClassNotFoundException, IOException {
+        //always perform the default de-serialization first
+        aInputStream.defaultReadObject();
+    }
+
+    public void setHostName(String hostname){
+        this.HostName =hostname;
+    }
+
+    public String getHostName(){
+        return this.HostName;
+    }
+
+
+    private void writeObject(
+            ObjectOutputStream aOutputStream
+    ) throws IOException {
+        //perform the default serialization for all non-transient, non-static fields
+        aOutputStream.defaultWriteObject();
+    }
+
+    public Boolean isHost(houseRulesUser user){
+        return user.getFullName().equals(HostName);
+    }
+
+
 }
 
 

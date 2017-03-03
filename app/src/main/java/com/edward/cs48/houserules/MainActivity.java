@@ -32,15 +32,23 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private static final String bundleU= "bundleU";
     private Button btnCreateEvent, btnMyEvents, btnMyInvites;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
+
 
     private FirebaseAuth auth;
     private FirebaseUser firebaseUser;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("User Info");
 
+    private Intent CreateEvent = new Intent(this, CreateEventActivity.class);
+    private Intent MyEvents = new Intent(this, MyEventsActivity.class);
+    private Intent Invites = new Intent(this, MyInvitesActivity.class);
+
+
+    public static houseRulesUser user = new houseRulesUser();
 
 
     @Override
@@ -62,10 +70,11 @@ public class MainActivity extends AppCompatActivity {
         btnMyInvites = (Button) findViewById(R.id.button_my_invites);
 
 
-
         btnCreateEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                user.setEmail(mFirebaseAuth.getCurrentUser().getEmail());
+                user.setFullName(mFirebaseAuth.getCurrentUser().getDisplayName());
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, CreateEventActivity.class);
                 startActivity(intent);
             }
@@ -74,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         btnMyEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                user.setEmail(mFirebaseAuth.getCurrentUser().getEmail());
+                user.setFullName(mFirebaseAuth.getCurrentUser().getDisplayName());
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, MyEventsActivity.class);
                 startActivity(intent);
             }
@@ -82,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         btnMyInvites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                user.setEmail(mFirebaseAuth.getCurrentUser().getEmail());
+                user.setFullName(mFirebaseAuth.getCurrentUser().getDisplayName());
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, MyInvitesActivity.class);
                 startActivity(intent);
             }
@@ -128,5 +141,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
     }
+
 
 }

@@ -30,6 +30,7 @@ public class AuthenticationActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +60,7 @@ public class AuthenticationActivity extends AppCompatActivity {
 
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
+
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return;

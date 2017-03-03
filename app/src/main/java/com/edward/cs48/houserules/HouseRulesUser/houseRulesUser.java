@@ -1,5 +1,9 @@
 package com.edward.cs48.houserules.HouseRulesUser;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 
@@ -7,7 +11,7 @@ import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
  * Created by Edward on 2/18/17.
  */
 
-public class houseRulesUser {
+public class houseRulesUser implements Serializable {
     private String fullName;
     private String screenName;
     private String email;
@@ -87,8 +91,32 @@ public class houseRulesUser {
     }
 
 
+    public ArrayList<houseRulesEvent> getHostEventList(){
+        return this.hostEventList;
+    }
+
+    public ArrayList<houseRulesEvent> getAttendEventList(){
+        return this.attendEventList;
+    }
+
     private boolean attendingEvent(houseRulesEvent event1){
         return this.attendEventList.contains(event1);
     }
+
+
+    private void readObject(ObjectInputStream aInputStream
+    ) throws ClassNotFoundException, IOException {
+        //always perform the default de-serialization first
+        aInputStream.defaultReadObject();
+    }
+
+
+    private void writeObject(
+            ObjectOutputStream aOutputStream
+    ) throws IOException {
+        //perform the default serialization for all non-transient, non-static fields
+        aOutputStream.defaultWriteObject();
+    }
+
 
 }
