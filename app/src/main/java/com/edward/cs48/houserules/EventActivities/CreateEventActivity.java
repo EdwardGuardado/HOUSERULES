@@ -61,7 +61,6 @@ public class CreateEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         auth = FirebaseAuth.getInstance();
-        myRef = userDatabase.getReference("publicEvents/user/"+ auth.getCurrentUser().getUid());
         userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
 
         setContentView(R.layout.activity_create_event);
@@ -96,6 +95,7 @@ public class CreateEventActivity extends AppCompatActivity {
             ourUser.addHostEvent(newEvent);
             userReference.setValue(ourUser);
             if (newEvent.getPrivacy()){
+                myRef = userDatabase.getReference("publicEvents/user/"+ auth.getCurrentUser().getUid()+ "/" + newEvent.getName());
                 myRef.setValue(newEvent);
             }
             startActivity(new Intent(com.edward.cs48.houserules.EventActivities.CreateEventActivity.this,MainActivity.class));
