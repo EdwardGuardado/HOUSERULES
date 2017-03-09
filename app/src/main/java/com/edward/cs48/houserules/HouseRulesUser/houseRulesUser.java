@@ -35,6 +35,10 @@ public class houseRulesUser implements Serializable {
         this.email = "";
         this.hostEventNum = 0; // Host specific feature
         this.attendEventNum = 0; // Attendee specific feature
+        this.setAttendEventList(new ArrayList<houseRulesEvent>());
+        this.setInvitedEventList(new ArrayList<houseRulesEvent>());
+        this.setHostEventList(new ArrayList<houseRulesEvent>());
+
     }
 
     public houseRulesUser(String fullName, String screenName, String email) {
@@ -43,6 +47,9 @@ public class houseRulesUser implements Serializable {
         this.email = email;
         this.hostEventNum = 0; // Host specific feature
         this.attendEventNum = 0; // Attendee specific feature
+        this.attendEventList = new ArrayList<houseRulesEvent>();
+        this.invitedEventList = new ArrayList<houseRulesEvent>();
+        this.hostEventList = new ArrayList<houseRulesEvent>();
     }
 
     public String getFullName(){return this.fullName;}
@@ -134,6 +141,7 @@ public class houseRulesUser implements Serializable {
     public void setInvitedEventList(ArrayList<houseRulesEvent> invitedEventList) {
         this.invitedEventList = invitedEventList;
     }
+
 
     private void readObject(ObjectInputStream aInputStream
     ) throws ClassNotFoundException, IOException {

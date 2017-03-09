@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -21,27 +22,48 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
+import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static com.edward.cs48.houserules.MainActivity.user;
 
 public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
 
     private static final String TAG = "MyEventsActivity";
     private ArrayList<String> events = new ArrayList<String>();
-    private ArrayList<houseRulesEvent> eventsHostedUser = user.getHostEventList();
-    private ArrayList<houseRulesEvent> eventsAttendUser = user.getAttendEventList();
+
+    private FirebaseAuth auth;
+    private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference userReference;
+    private houseRulesUser ourUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        auth = FirebaseAuth.getInstance();
+        userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
         super.onCreate(savedInstanceState);
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
-        setUp();
-        String[] newEvents = events.toArray(new String[events.size()]);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
-        setListAdapter(adapter);
+        ValueEventListener userListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Get Post object and use the values to update the UI
+                ourUser = dataSnapshot.getValue(houseRulesUser.class);
+                setup();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.w("Failed to load user", "loadPost:onCancelled", databaseError.toException());
+            }
+        };
+        userReference.addValueEventListener(userListener);
     }
 
 
@@ -68,12 +90,17 @@ public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
         super.onResume();
     }
 
-    private void setUp(){
-        for ( houseRulesEvent event : eventsHostedUser){
+    public void setup(){
+        for (houseRulesEvent event : ourUser.getHostEventList()) {
             events.add(event.getName());
         }
-        for (houseRulesEvent event : eventsAttendUser){
+        for (houseRulesEvent event : ourUser.getAttendEventList()) {
             events.add(event.getName());
         }
+        String[] newEvents = events.toArray(new String[events.size()]);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
+        setListAdapter(adapter);
     }
+
+
 }

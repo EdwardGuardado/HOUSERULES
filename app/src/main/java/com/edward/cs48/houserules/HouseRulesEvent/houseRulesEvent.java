@@ -20,7 +20,7 @@ public class houseRulesEvent implements Serializable {
     private String address;
     private String date;
     private String time;
-    private EditText houseRules;
+    private String houseRules;
     private boolean Public;
     private String HostName;
 
@@ -57,7 +57,7 @@ public class houseRulesEvent implements Serializable {
         this.time = newTime;
     }
 
-    public void setHouseRules(EditText newHouseRules) {
+    public void setHouseRules(String newHouseRules) {
         this.houseRules = newHouseRules;
     }
 
@@ -81,7 +81,7 @@ public class houseRulesEvent implements Serializable {
         return this.time;
     }
 
-    public EditText getHouseRules() {
+    public String getHouseRules() {
         return this.houseRules;
     }
 

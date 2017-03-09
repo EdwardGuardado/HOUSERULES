@@ -41,8 +41,6 @@ public class AuthenticationActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         myRef = userDatabase.getReference("user");
-        testEvent.setAddress("5613 Aspen Ct.");
-        testEvent.setName("Fuck Gio");
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
@@ -76,8 +74,7 @@ public class AuthenticationActivity extends AppCompatActivity {
                 user.setAttendEventList(new ArrayList<houseRulesEvent>());
                 user.setHostEventList(new ArrayList<houseRulesEvent>());
                 user.setInvitedEventList(new ArrayList<houseRulesEvent>());
-                user.getHostEventList().add(testEvent);
-                myRef.child("user").child(auth.getCurrentUser().getProviderId()).setValue(user);
+                myRef.child("userdatabase").child(auth.getCurrentUser().getUid()).setValue(user);
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return;

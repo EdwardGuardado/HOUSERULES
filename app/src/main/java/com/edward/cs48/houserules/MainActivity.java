@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private Intent Invites = new Intent(this, MyInvitesActivity.class);
 
 
-    public static houseRulesUser user = new houseRulesUser();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,8 +71,6 @@ public class MainActivity extends AppCompatActivity {
         btnCreateEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setEmail(mFirebaseAuth.getCurrentUser().getEmail());
-                user.setFullName(mFirebaseAuth.getCurrentUser().getDisplayName());
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, CreateEventActivity.class);
                 startActivity(intent);
             }
@@ -83,8 +79,6 @@ public class MainActivity extends AppCompatActivity {
         btnMyEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setEmail(mFirebaseAuth.getCurrentUser().getEmail());
-                user.setFullName(mFirebaseAuth.getCurrentUser().getDisplayName());
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, MyEventsActivity.class);
                 startActivity(intent);
             }
@@ -93,8 +87,6 @@ public class MainActivity extends AppCompatActivity {
         btnMyInvites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user.setEmail(mFirebaseAuth.getCurrentUser().getEmail());
-                user.setFullName(mFirebaseAuth.getCurrentUser().getDisplayName());
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, MyInvitesActivity.class);
                 startActivity(intent);
             }
