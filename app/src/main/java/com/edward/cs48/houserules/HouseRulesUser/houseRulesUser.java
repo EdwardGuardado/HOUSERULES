@@ -103,6 +103,37 @@ public class houseRulesUser implements Serializable {
         return this.attendEventList.contains(event1);
     }
 
+    public ArrayList<houseRulesEvent> getInvitedEventList() {
+        return invitedEventList;
+    }
+
+    public Boolean getHost() {
+        return isHost;
+    }
+
+    public void setAttendEventList(ArrayList<houseRulesEvent> attendEventList) {
+        this.attendEventList = attendEventList;
+    }
+
+    public void setAttendEventNum(int attendEventNum) {
+        this.attendEventNum = attendEventNum;
+    }
+
+    public void setHost(Boolean host) {
+        isHost = host;
+    }
+
+    public void setHostEventList(ArrayList<houseRulesEvent> hostEventList) {
+        this.hostEventList = hostEventList;
+    }
+
+    public void setHostEventNum(int hostEventNum) {
+        this.hostEventNum = hostEventNum;
+    }
+
+    public void setInvitedEventList(ArrayList<houseRulesEvent> invitedEventList) {
+        this.invitedEventList = invitedEventList;
+    }
 
     private void readObject(ObjectInputStream aInputStream
     ) throws ClassNotFoundException, IOException {

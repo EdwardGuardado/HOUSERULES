@@ -40,6 +40,7 @@ public class CreateEventActivity extends AppCompatActivity {
     private EditText eventTime;
     private CheckBox makePublic;
     private Button createEventBtn;
+    private DatabaseReference userDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

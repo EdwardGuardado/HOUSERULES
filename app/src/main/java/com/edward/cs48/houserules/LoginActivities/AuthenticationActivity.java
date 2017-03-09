@@ -11,6 +11,7 @@ import android.view.View;
 
 import android.widget.ImageView;
 
+import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.firebase.ui.auth.*;
 import com.edward.cs48.houserules.R;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -18,7 +19,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.HouseRulesUser.*;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 
@@ -27,12 +31,18 @@ public class AuthenticationActivity extends AppCompatActivity {
     private static final String FIREBASE_TOS_URL = "https://firebase.google.com/terms/";
     private static final int RC_SIGN_IN = 100;
     private ImageView imageView4;
-
     private FirebaseAuth auth;
+    private houseRulesUser user = new houseRulesUser();
+    private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference myRef;
+    private houseRulesEvent testEvent = new houseRulesEvent();
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        myRef = userDatabase.getReference("user");
+        testEvent.setAddress("5613 Aspen Ct.");
+        testEvent.setName("Fuck Gio");
         super.onCreate(savedInstanceState);
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) {
@@ -60,7 +70,14 @@ public class AuthenticationActivity extends AppCompatActivity {
 
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
-
+                user.setEmail(auth.getCurrentUser().getEmail().toString());
+                user.setFullName(auth.getCurrentUser().getDisplayName().toString());
+                user.setScreenName(auth.getCurrentUser().getDisplayName().toString());
+                user.setAttendEventList(new ArrayList<houseRulesEvent>());
+                user.setHostEventList(new ArrayList<houseRulesEvent>());
+                user.setInvitedEventList(new ArrayList<houseRulesEvent>());
+                user.getHostEventList().add(testEvent);
+                myRef.child("user").child(auth.getCurrentUser().getProviderId()).setValue(user);
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return;
