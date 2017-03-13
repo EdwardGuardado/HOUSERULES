@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("User Info");
 
-    private Intent CreateEvent = new Intent(this, CreateEventActivity.class);
-    private Intent MyEvents = new Intent(this, MyEventsActivity.class);
-    private Intent Invites = new Intent(this, MyInvitesActivity.class);
 
 
 
