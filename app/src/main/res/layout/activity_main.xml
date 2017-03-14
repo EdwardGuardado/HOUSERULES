@@ -1,43 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    app:layout_collapseParallaxMultiplier="1.0"
-    android:gravity="center"
-    android:weightSum="1"
-    tools:context="com.edward.cs48.houserules.MainActivity">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <Button
-        android:text="Create an Event"
+    <ImageView
+        android:scaleType="fitXY"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:src="@drawable/ourbackground" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_create_event" />
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        app:layout_collapseParallaxMultiplier="1.0"
+        android:gravity="center"
+        android:weightSum="1"
+        tools:context="com.edward.cs48.houserules.MainActivity">
 
-    <Button
-        android:id="@+id/button_public_events"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Public Events" />
+        <Button
+            android:text="Create an Event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_create_event" />
 
-    <Button
-        android:text="My Events"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_my_events" />
+        <Button
+            android:id="@+id/button_public_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Public Events" />
 
-    <Button
-        android:id="@+id/button_attending_events"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Going" />
+        <Button
+            android:text="My Events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_my_events" />
 
-    <Button
-        android:text="My Invites"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button_my_invites" />
+        <Button
+            android:id="@+id/button_attending_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Going" />
 
-</LinearLayout>
+        <Button
+            android:text="My Invites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_my_invites" />
+
+    </LinearLayout>
+
+</FrameLayout>
