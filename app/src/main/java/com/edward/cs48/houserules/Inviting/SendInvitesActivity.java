@@ -1,4 +1,4 @@
-package com.edward.cs48.houserules.InvitingNCreating;
+package com.edward.cs48.houserules.Inviting;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

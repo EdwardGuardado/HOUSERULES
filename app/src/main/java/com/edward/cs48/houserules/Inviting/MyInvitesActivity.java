@@ -1,4 +1,4 @@
-package com.edward.cs48.houserules.InvitingNCreating;
+package com.edward.cs48.houserules.Inviting;
 
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;

@@ -1,4 +1,4 @@
-package com.edward.cs48.houserules.InvitingNCreating;
+package com.edward.cs48.houserules.EventActivities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;

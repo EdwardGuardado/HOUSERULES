@@ -34,20 +34,20 @@
             android:value="AIzaSyC_0rphKJpVPauwVeevPEGz9S3B_PuOHTk" />
 
         <activity
-            android:name=".InvitingNCreating.CreateEventActivity"
+            android:name=".EventActivities.CreateEventActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.MyEventsActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".InvitingNCreating.MyInvitesActivity"
+            android:name=".Inviting.MyInvitesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.PublicEventsActivity"
             android:label="@string/title_activity_public_events"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".InvitingNCreating.SendInvitesActivity"
+            android:name=".Inviting.SendInvitesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.AttendEventsActivity"
