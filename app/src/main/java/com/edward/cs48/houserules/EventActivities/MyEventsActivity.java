@@ -117,6 +117,4 @@ public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
 
     */
 }
-=======
-}
->>>>>>> e05e00a1a29e18c34bd22e7cf1009ad8c794845a
+

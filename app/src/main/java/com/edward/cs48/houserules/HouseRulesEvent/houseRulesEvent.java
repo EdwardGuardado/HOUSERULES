@@ -24,13 +24,14 @@ import static android.R.attr.data;
 public class houseRulesEvent implements Serializable {
     private String name;
     private String address;
-    private Place geoLoc ;
     private String date;
     private String time;
     private String houseRules;
     private boolean Public;
     private String hostName;
     private String hostID;
+    private double lat;
+    private double lon;
 
 
 
@@ -40,8 +41,9 @@ public class houseRulesEvent implements Serializable {
         this.date = "";
         this.time = "";
         this.Public = false;
-        geoLoc = null;
         this.hostID = "";
+        this.lat=0;
+        this.lon =0;
     }
 
     public houseRulesEvent(String name, String address, String date, String time, String houseRules, boolean privacy) {
@@ -50,8 +52,8 @@ public class houseRulesEvent implements Serializable {
         this.date = date;
         this.time = time;
         this.Public = privacy;
-        this.geoLoc = null;
-
+        this.lat=0;
+        this.lon =0;
         this.hostID = "";
     }
 
@@ -109,13 +111,20 @@ public class houseRulesEvent implements Serializable {
         aInputStream.defaultReadObject();
     }
 
-
-    public void setGeoLoc(Place geoLoc) {
-        this.geoLoc = geoLoc;
+    public void setLat(double lat) {
+        this.lat = lat;
     }
 
-    public Place getGeoLoc() {
-        return geoLoc;
+    public void setLon(double lon) {
+        this.lon = lon;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public double getLon() {
+        return lon;
     }
 
     public void setHostName(String hostname){
@@ -127,7 +136,7 @@ public class houseRulesEvent implements Serializable {
     }
 
     public void setHostID(String hostID) {
-        hostID = hostID;
+        this.hostID = hostID;
     }
 
     public String getHostID() {
