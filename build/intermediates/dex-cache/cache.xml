@@ -3,21 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/Users/Edward/.android/build-cache/81fdb930696d3d8fca258ece9d41ac644fdafd8d/output/jars/classes.jar"
-        jumboMode="false"
+        jar="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="dce0f3de11781e1ee758cba483871b598c9d4931">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b4bb24b1a6976dbd4e2ecaa69586d23681ebef67/classes.dex" />
+        sha1="2871e2ab9eb5e53ebfe706106226a84c753214d6">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_bf77a469ae59808ab535caa2b98761bd4ffeedfc\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/Edward/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-beta5/constraint-layout-solver-1.0.0-beta5.jar"
-        jumboMode="false"
+        jar="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ff0dad5e4fc720f478ce8b5f6edf76a932d9b886">
-        <dex dex="/Users/Edward/Programming and Code/AndroidStudioProjects/HOUSERULES/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.0-beta5_811ee707c26aaee285ea8ba5b45c60b9a621e1c5/classes.dex" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cce3d658e1e8bd67a39d9a1fc3b63f7300710bf8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Daniel\.android\build-cache\ff2044e68fac010c224b29dfa244850153e74f5b\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c76f6507a42aec274953e882bf3c49a570843ef5">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_48c5509fcb18121bd7ccc67ad8456991ed682351\classes.dex" />
     </item>
 
 </items>
