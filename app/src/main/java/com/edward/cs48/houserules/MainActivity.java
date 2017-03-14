@@ -14,7 +14,7 @@ import com.edward.cs48.houserules.EventActivities.AttendEventsActivity;
 import com.edward.cs48.houserules.EventActivities.CreateEventActivity;
 import com.edward.cs48.houserules.EventActivities.MyEventsActivity;
 import com.edward.cs48.houserules.Inviting.MyInvitesActivity;
-import com.edward.cs48.houserules.EventActivities.PublicEventsActivity;
+import com.edward.cs48.houserules.EventActivities.PublicEvent.PublicEventsActivity;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;

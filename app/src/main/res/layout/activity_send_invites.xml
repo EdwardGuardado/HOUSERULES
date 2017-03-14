@@ -25,7 +25,7 @@
         android:inputType="textPersonName" />
 
     <ListView
-        android:id="@+id/hosted_events_send"
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"

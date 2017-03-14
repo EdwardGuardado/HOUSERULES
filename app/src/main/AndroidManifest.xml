@@ -43,7 +43,7 @@
             android:name=".Inviting.MyInvitesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".EventActivities.PublicEventsActivity"
+            android:name=".EventActivities.PublicEvent.PublicEventsActivity"
             android:label="@string/title_activity_public_events"
             android:parentActivityName=".MainActivity" />
         <activity

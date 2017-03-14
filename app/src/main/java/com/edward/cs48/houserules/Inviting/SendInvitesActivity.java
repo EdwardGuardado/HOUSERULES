@@ -92,7 +92,7 @@ public class SendInvitesActivity extends ListActivity {
         searchButton = (Button) findViewById(R.id.search_btn);
         // When submit button is clicked, function checks to see if any user in the Firebase database
         // has the email being searched for
-        searchButton.setOnClickListener(new View.OnClickListener() {
+        /*searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 View view = (LayoutInflater.from(SendInvitesActivity.this)).inflate(R.layout.activity_send_invites, null);
@@ -115,11 +115,11 @@ public class SendInvitesActivity extends ListActivity {
                 Dialog dialog = alertBuilder.create();
                 dialog.show();
             }
-        });
+        });*/
     }
 
     public void setup(){
-        eventNames = new ArrayList<String>(ourUser.getAttendEventMap().keySet());
+        eventNames = new ArrayList<String>(ourUser.getHostEventMap().keySet());
         String[] newEvents = eventNames.toArray(new String[ourUser.getAttendEventMap().size()]);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
         setListAdapter(adapter);
