@@ -93,7 +93,6 @@ public class CreateEventActivity extends AppCompatActivity {
             public void onClick(View view) {
             makeEvent();
             ourUser.addHostEvent(newEvent);
-            ourUser.addAttendEvent(newEvent);
             userReference.setValue(ourUser);
             if (newEvent.getPrivacy()){
                 myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");

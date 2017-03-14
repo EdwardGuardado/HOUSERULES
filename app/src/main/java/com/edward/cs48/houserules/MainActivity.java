@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.edward.cs48.houserules.EventActivities.AttendEventsActivity;
 import com.edward.cs48.houserules.EventActivities.CreateEventActivity;
 import com.edward.cs48.houserules.EventActivities.MyEventsActivity;
 import com.edward.cs48.houserules.EventActivities.MyInvitesActivity;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private static final String bundleU= "bundleU";
-    private Button btnCreateEvent, btnMyEvents, btnMyInvites, btnPublicEvents;
+    private Button btnCreateEvent, btnMyEvents, btnMyInvites, btnPublicEvents, btnAttendingEvents;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
 
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         }
         btnCreateEvent = (Button) findViewById(R.id.button_create_event);
         btnMyEvents = (Button) findViewById(R.id.button_my_events);
+        btnAttendingEvents = (Button) findViewById(R.id.button_attending_events);
         btnMyInvites = (Button) findViewById(R.id.button_my_invites);
         btnPublicEvents = (Button) findViewById(R.id.button_public_events);
 
@@ -87,6 +89,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, MyInvitesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAttendingEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, AttendEventsActivity.class);
                 startActivity(intent);
             }
         });

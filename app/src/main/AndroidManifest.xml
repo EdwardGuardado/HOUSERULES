@@ -46,6 +46,12 @@
             android:name=".EventActivities.PublicEventsActivity"
             android:label="@string/title_activity_public_events"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EventActivities.SendInvitesActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EventActivities.AttendEventsActivity"
+            android:label="@string/title_activity_attend_events"></activity>
     </application>
 
 </manifest>
