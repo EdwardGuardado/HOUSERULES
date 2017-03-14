@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="customtabs-25.1.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/915eb48ee431a3b4955c19464e48e3764e9b8ca7/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/915eb48ee431a3b4955c19464e48e3764e9b8ca7/output/res" />
+      <root url="file://$USER_HOME$/.android/build-cache/d9cc272e50cee564cd34acf92978de5671013a61/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/d9cc272e50cee564cd34acf92978de5671013a61/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/customtabs/25.1.1/customtabs-25.1.1-sources.jar!/" />
       <root url="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/customtabs/25.1.1/customtabs-25.1.1-sources.jar!/" />
     </SOURCES>
   </library>
