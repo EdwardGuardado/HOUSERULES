@@ -108,12 +108,9 @@ public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
         super.onResume();
     }
 
-    protected void onPause() {
-        super.onPause();
-    }
+    protected void onPause() { super.onPause(); }
 
     private void removeEvent(houseRulesEvent removed) {
         String name = "publicEvents/" + auth.getCurrentUser().getUid() + removed.hashCode() + "/";
-
     }
 }
