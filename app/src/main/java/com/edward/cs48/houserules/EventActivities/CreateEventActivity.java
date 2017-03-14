@@ -51,7 +51,6 @@ public class CreateEventActivity extends AppCompatActivity  implements OnConnect
     private CheckBox makePublic;
     private Button createEventBtn, pickAPlaceButton;
     private int PLACE_PICKER_REQUEST = 1;
-    private Place geoLocation = null;
 
 
 
