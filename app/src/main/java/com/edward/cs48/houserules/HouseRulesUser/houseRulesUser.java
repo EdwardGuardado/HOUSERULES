@@ -5,6 +5,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 
 /**
@@ -23,11 +26,11 @@ public class houseRulesUser implements Serializable {
     private int attendEventNum; // Attendee specific feature
 
     // List of events of which the user is a host of
-    private ArrayList<houseRulesEvent> hostEventList = new ArrayList<houseRulesEvent>();
+    private Map<String,houseRulesEvent> hostEventMap = new HashMap<String, houseRulesEvent>();
     // List of events of which the user is an attendee of
-    private ArrayList<houseRulesEvent> attendEventList = new ArrayList<houseRulesEvent>();
+    private Map<String,houseRulesEvent> attendEventMap = new HashMap<String, houseRulesEvent>();
     //List of events of which the user is invited to
-    private ArrayList<houseRulesEvent> invitedEventList = new ArrayList<houseRulesEvent>();
+    private Map<String,houseRulesEvent> invitedEventMap = new HashMap<String, houseRulesEvent>();
 
     public houseRulesUser() {
         this.fullName="";
@@ -35,9 +38,9 @@ public class houseRulesUser implements Serializable {
         this.email = "";
         this.hostEventNum = 0; // Host specific feature
         this.attendEventNum = 0; // Attendee specific feature
-        this.setAttendEventList(new ArrayList<houseRulesEvent>());
-        this.setInvitedEventList(new ArrayList<houseRulesEvent>());
-        this.setHostEventList(new ArrayList<houseRulesEvent>());
+        this.setAttendEventMap(new HashMap<String, houseRulesEvent>());
+        this.setInvitedEventMap(new HashMap<String, houseRulesEvent>());
+        this.setHostEventMap(new HashMap<String, houseRulesEvent>());
 
     }
 
@@ -47,9 +50,9 @@ public class houseRulesUser implements Serializable {
         this.email = email;
         this.hostEventNum = 0; // Host specific feature
         this.attendEventNum = 0; // Attendee specific feature
-        this.attendEventList = new ArrayList<houseRulesEvent>();
-        this.invitedEventList = new ArrayList<houseRulesEvent>();
-        this.hostEventList = new ArrayList<houseRulesEvent>();
+        this.attendEventMap = new HashMap<String, houseRulesEvent>();
+        this.invitedEventMap = new HashMap<String, houseRulesEvent>();
+        this.hostEventMap = new HashMap<String, houseRulesEvent>();
     }
 
     public String getFullName(){return this.fullName;}
@@ -71,55 +74,55 @@ public class houseRulesUser implements Serializable {
     }
 
     public void addHostEvent(houseRulesEvent newHostEvent) { // Host specific feature
-        hostEventList.add(newHostEvent);
+        hostEventMap.put(newHostEvent.getName(), newHostEvent);
         hostEventNum++;
     }
 
     public void addAttendEvent(houseRulesEvent newAttendEvent) {
-        attendEventList.add(newAttendEvent);
+        attendEventMap.put(newAttendEvent.getName(),newAttendEvent);
         attendEventNum++;
     }
 
     public void addInviteEvent(houseRulesEvent newInviteEvent) {
-        invitedEventList.add(newInviteEvent);
+        invitedEventMap.put(newInviteEvent.getName(),newInviteEvent);
     }
 
     public void removeAttendEvent (houseRulesEvent newAttendEvent){
-        attendEventList.remove(newAttendEvent);
+        attendEventMap.remove(newAttendEvent.getName());
         attendEventNum--;
     }
 
     public void removeHostEvent (houseRulesEvent newHostEvent){
-        hostEventList.remove(newHostEvent);
+        hostEventMap.remove(newHostEvent.getName());
         hostEventNum--;
     }
     public void removeInviteEvent (houseRulesEvent newInviteEvent){
-        invitedEventList.remove(newInviteEvent);
+        invitedEventMap.remove(newInviteEvent.getName());
     }
 
 
-    public ArrayList<houseRulesEvent> getHostEventList(){
-        return this.hostEventList;
+    public Map<String, houseRulesEvent> getHostEventMap() {
+        return hostEventMap;
     }
 
-    public ArrayList<houseRulesEvent> getAttendEventList(){
-        return this.attendEventList;
+    public Map<String, houseRulesEvent> getAttendEventMap() {
+        return attendEventMap;
     }
 
     private boolean attendingEvent(houseRulesEvent event1){
-        return this.attendEventList.contains(event1);
+        return this.attendEventMap.containsKey(event1.getName());
     }
 
-    public ArrayList<houseRulesEvent> getInvitedEventList() {
-        return invitedEventList;
+    public Map<String, houseRulesEvent> getInvitedEventMap() {
+        return invitedEventMap;
     }
 
     public Boolean getHost() {
         return isHost;
     }
 
-    public void setAttendEventList(ArrayList<houseRulesEvent> attendEventList) {
-        this.attendEventList = attendEventList;
+    public void setAttendEventMap(Map<String, houseRulesEvent> attendEventMap) {
+        this.attendEventMap = attendEventMap;
     }
 
     public void setAttendEventNum(int attendEventNum) {
@@ -130,18 +133,17 @@ public class houseRulesUser implements Serializable {
         isHost = host;
     }
 
-    public void setHostEventList(ArrayList<houseRulesEvent> hostEventList) {
-        this.hostEventList = hostEventList;
+    public void setHostEventMap(Map<String, houseRulesEvent> hostEventMap) {
+        this.hostEventMap = hostEventMap;
     }
 
     public void setHostEventNum(int hostEventNum) {
         this.hostEventNum = hostEventNum;
     }
 
-    public void setInvitedEventList(ArrayList<houseRulesEvent> invitedEventList) {
-        this.invitedEventList = invitedEventList;
+    public void setInvitedEventMap(Map<String, houseRulesEvent> invitedEventMap) {
+        this.invitedEventMap = invitedEventMap;
     }
-
 
     private void readObject(ObjectInputStream aInputStream
     ) throws ClassNotFoundException, IOException {

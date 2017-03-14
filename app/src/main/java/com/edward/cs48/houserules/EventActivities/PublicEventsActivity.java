@@ -82,7 +82,7 @@ public class PublicEventsActivity extends ListActivity{ //AppCompatActivity {
     }
 
     public void setup(){
-
+        //Reading Nodes of public event dataBase
         eventsRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -101,8 +101,6 @@ public class PublicEventsActivity extends ListActivity{ //AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-
-
     }
 
 

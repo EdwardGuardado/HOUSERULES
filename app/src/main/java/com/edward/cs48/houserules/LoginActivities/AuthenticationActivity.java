@@ -28,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 
 public class AuthenticationActivity extends AppCompatActivity {
@@ -86,9 +87,9 @@ public class AuthenticationActivity extends AppCompatActivity {
                             user.setEmail(auth.getCurrentUser().getEmail().toString());
                             user.setFullName(auth.getCurrentUser().getDisplayName().toString());
                             user.setScreenName(auth.getCurrentUser().getDisplayName().toString());
-                            user.setAttendEventList(new ArrayList<houseRulesEvent>());
-                            user.setHostEventList(new ArrayList<houseRulesEvent>());
-                            user.setInvitedEventList(new ArrayList<houseRulesEvent>());
+                            user.setAttendEventMap(new HashMap<String, houseRulesEvent>());
+                            user.setHostEventMap(new HashMap<String, houseRulesEvent>());
+                            user.setInvitedEventMap(new HashMap<String, houseRulesEvent>());
                             myRef.child("userdatabase").child(auth.getCurrentUser().getUid()).setValue(user);
                         }
                     }

@@ -37,13 +37,12 @@ import java.util.Iterator;
 public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
 
     private static final String TAG = "MyEventsActivity";
-    private ArrayList<String> eventNames = new ArrayList<String>();
-    private ArrayList<houseRulesEvent> events = new ArrayList<houseRulesEvent>();
 
     private FirebaseAuth auth;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference userReference;
     private houseRulesUser ourUser;
+    private ArrayList<String> eventNames;
 
 
     @Override
@@ -92,15 +91,8 @@ public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
     }
 
     public void setup(){
-        for (houseRulesEvent event : ourUser.getHostEventList()) {
-            eventNames.add(event.getName());
-            events.add(event);
-        }
-        for (houseRulesEvent event : ourUser.getAttendEventList()) {
-            eventNames.add(event.getName());
-            events.add(event);
-        }
-        String[] newEvents = eventNames.toArray(new String[events.size()]);
+        eventNames = new ArrayList<String>(ourUser.getAttendEventMap().keySet());
+        String[] newEvents = eventNames.toArray(new String[ourUser.getAttendEventMap().size()]);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
         setListAdapter(adapter);
     }
