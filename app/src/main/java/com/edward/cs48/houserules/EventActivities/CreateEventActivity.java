@@ -226,9 +226,9 @@ public class CreateEventActivity extends AppCompatActivity  implements OnConnect
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == PLACE_PICKER_REQUEST) {
-            if (resultCode == 1) {
+            if (resultCode == RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, this);
-                newEvent.setGeoLoc(place);
+ //               newEvent.setGeoLoc(place);
                 newEvent.setAddress(place.getAddress().toString());
                 String toastMsg = String.format("Place: %s", place.getName());
                 Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();

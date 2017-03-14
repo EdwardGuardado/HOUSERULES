@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 
 public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
-
+    /*
     private static final String TAG = "MyEventsActivity";
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
@@ -113,4 +113,10 @@ public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
     private void removeEvent(houseRulesEvent removed) {
         String name = "publicEvents/" + auth.getCurrentUser().getUid() + removed.hashCode() + "/";
     }
+<<<<<<< HEAD
+
+    */
 }
+=======
+}
+>>>>>>> e05e00a1a29e18c34bd22e7cf1009ad8c794845a

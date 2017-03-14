@@ -34,7 +34,6 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private static final String bundleU= "bundleU";
     private Button btnCreateEvent, btnMyEvents, btnMyInvites, btnPublicEvents, btnAttendingEvents;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
