@@ -29,8 +29,8 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import java.util.ArrayList;
 
 
-public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
-    /*
+public class MyEventsActivity extends AppCompatActivity {
+
     private static final String TAG = "MyEventsActivity";
 
     public static class EventViewHolder extends RecyclerView.ViewHolder {
@@ -64,7 +64,6 @@ public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
                 // Get Post object and use the values to update the UI
                 ourUser = dataSnapshot.getValue(houseRulesUser.class);
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.w("Failed to load user", "loadPost:onCancelled", databaseError.toException());
@@ -104,19 +103,11 @@ public class MyEventsActivity extends AppCompatActivity { //AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-    }
+    protected void onResume() { super.onResume(); }
 
     protected void onPause() { super.onPause(); }
 
     private void removeEvent(houseRulesEvent removed) {
         String name = "publicEvents/" + auth.getCurrentUser().getUid() + removed.hashCode() + "/";
     }
-<<<<<<< HEAD
-
-    */
 }
-=======
-}
->>>>>>> e05e00a1a29e18c34bd22e7cf1009ad8c794845a
