@@ -29,13 +29,11 @@
                 android:id="@+id/event_name"
                 android:hint="Add a name for your new event" />
 
-            <EditText
+            <Button
+                android:id="@+id/place_picker_create"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPostalAddress"
-                android:ems="10"
-                android:id="@+id/event_address"
-                android:hint="Where will your event take place?" />
+                android:text="Pick A Location" />
 
             <EditText
                 android:layout_width="match_parent"

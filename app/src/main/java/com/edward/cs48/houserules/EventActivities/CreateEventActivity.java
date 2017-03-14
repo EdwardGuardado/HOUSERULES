@@ -1,7 +1,9 @@
 package com.edward.cs48.houserules.EventActivities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
@@ -21,7 +24,14 @@ import com.edward.cs48.houserules.R;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -29,36 +39,47 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import static android.R.attr.data;
 
 
-public class CreateEventActivity extends AppCompatActivity {
+public class CreateEventActivity extends AppCompatActivity  implements OnConnectionFailedListener {
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     Calendar dateTime = Calendar.getInstance();
     private houseRulesEvent newEvent = new houseRulesEvent();
     private EditText eventName;
-    private EditText eventAddress;
     private EditText eventDate;
     private EditText eventTime;
     private EditText houseRules;
     private CheckBox makePublic;
-    private Button createEventBtn;
+    private Button createEventBtn, pickAPlaceButton;
+    private int PLACE_PICKER_REQUEST = 1;
+    private Place geoLocation = null;
+
+
 
     private FirebaseAuth auth;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference myRef;
     private DatabaseReference userReference;
     private houseRulesUser ourUser;
+    private GoogleApiClient mGoogleApiClient;
+    private PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         auth = FirebaseAuth.getInstance();
         userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
@@ -66,9 +87,19 @@ public class CreateEventActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_event);
 
 
+
+        mGoogleApiClient = new GoogleApiClient
+                .Builder(this)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(this, this)
+                .build();
+
+
+
         eventName = (EditText) findViewById(R.id.event_name);
-        eventAddress = (EditText) findViewById(R.id.event_address);
         eventDate = (EditText) findViewById(R.id.event_date);
+        pickAPlaceButton = (Button) findViewById(R.id.place_picker_create);
         eventTime = (EditText) findViewById(R.id.event_time);
         houseRules = ((EditText) findViewById(R.id.event_rules));
         makePublic = (CheckBox) findViewById(R.id.event_privacy);
@@ -87,6 +118,21 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         };
         userReference.addValueEventListener(userListener);
+
+
+        pickAPlaceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    try {
+                        startActivityForResult(builder.build(com.edward.cs48.houserules.EventActivities.CreateEventActivity.this), PLACE_PICKER_REQUEST);
+                    } catch (GooglePlayServicesRepairableException e) {
+                        e.printStackTrace();
+                    } catch (GooglePlayServicesNotAvailableException e) {
+                        e.printStackTrace();
+                    }
+            }
+
+        });
 
         createEventBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +165,6 @@ public class CreateEventActivity extends AppCompatActivity {
     private void makeEvent(){
         if(validateForm()){
             newEvent.setName(eventName.getText().toString());
-            newEvent.setAddress(eventName.getText().toString());
             newEvent.setDate(eventDate.getText().toString());
             newEvent.setTime(eventTime.getText().toString());
             newEvent.setHouseRules(houseRules.getText().toString());
@@ -145,18 +190,13 @@ public class CreateEventActivity extends AppCompatActivity {
         }
 
 
-        String addy = eventAddress.getText().toString();
-        if (TextUtils.isEmpty(addy)) {
-            eventAddress.setError("Required.");
-            valid = false;
-        } else {
-            eventAddress.setError(null);
-        }
-
         return valid;
     }
 
 
+    private void placePickerSetup(){
+
+    }
     @Override
     public void onStart() {
         super.onStart();
@@ -177,5 +217,25 @@ public class CreateEventActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+        return;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PLACE_PICKER_REQUEST) {
+            if (resultCode == 1) {
+                Place place = PlacePicker.getPlace(data, this);
+                newEvent.setGeoLoc(place);
+                newEvent.setAddress(place.getAddress().toString());
+                String toastMsg = String.format("Place: %s", place.getName());
+                Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+
 
 }

@@ -3,6 +3,8 @@ package com.edward.cs48.houserules.HouseRulesEvent;
 import android.widget.EditText;
 
 import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -18,12 +20,13 @@ import java.io.Serializable;
 public class houseRulesEvent implements Serializable {
     private String name;
     private String address;
+    private Place geoLoc;
     private String date;
     private String time;
     private String houseRules;
     private boolean Public;
-    private String HostName;
-    private String HostID;
+    private String hostName;
+    private String hostID;
 
 
     public houseRulesEvent() {
@@ -96,20 +99,28 @@ public class houseRulesEvent implements Serializable {
         aInputStream.defaultReadObject();
     }
 
+    public void setGeoLoc(Place geoLoc) {
+        this.geoLoc = geoLoc;
+    }
+
+    public Place getGeoLoc() {
+        return geoLoc;
+    }
+
     public void setHostName(String hostname){
-        this.HostName =hostname;
+        this.hostName =hostname;
     }
 
     public String getHostName(){
-        return this.HostName;
+        return this.hostName;
     }
 
     public void setHostID(String hostID) {
-        HostID = hostID;
+        hostID = hostID;
     }
 
     public String getHostID() {
-        return HostID;
+        return hostID;
     }
 
     private void writeObject(
@@ -120,7 +131,7 @@ public class houseRulesEvent implements Serializable {
     }
 
     public Boolean isHost(houseRulesUser user){
-        return user.getFullName().equals(HostName);
+        return user.getFullName().equals(hostName);
     }
 
 

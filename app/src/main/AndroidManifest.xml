@@ -31,7 +31,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8" />
+            android:value="AIzaSyC_0rphKJpVPauwVeevPEGz9S3B_PuOHTk" />
 
         <activity
             android:name=".EventActivities.CreateEventActivity"
