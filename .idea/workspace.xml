@@ -246,6 +246,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/twitter_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/twitter_2_3_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/twitter_core_2_3_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/twitter_core_2_3_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -254,6 +255,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/LoginActivities/AuthenticationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/LoginActivities/AuthenticationActivity.java" />
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
     </list>
     <ignored path="HOUSERULES.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -285,6 +290,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="CreateEventActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -383,6 +389,18 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="CreateEventActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1440">
+              <caret line="98" column="96" selection-start-line="98" selection-start-column="96" selection-end-line="98" selection-end-column="96" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1875#1900#0" expanded="true" />
+                <marker date="1489456171000" expanded="false" signature="3542:3637" ph="(view) → {" />
+              </folding>
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
             </state>
           </provider>
         </entry>
@@ -2873,10 +2891,10 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_my_events.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_event.xml" />
         <option value="$USER_HOME$/.android/build-cache/c3f9e8cc4bc949331f66305e361010cc84a187be/output/jars/classes.jar!/com/google/firebase/auth/FirebaseAuth.class" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/LoginActivities/AuthenticationActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/HouseRulesEvent/houseRulesEvent.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/HouseRulesUser/houseRulesUser.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/MyEventsActivity.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java" />
         <option value="$PROJECT_DIR$/local.properties" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
@@ -2886,6 +2904,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/PublicEventsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/LoginActivities/AuthenticationActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/HouseRulesData/houseRulesMap.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java" />
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
       </list>
     </option>
   </component>
@@ -2920,8 +2944,47 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="ProjectPane" />
       <pane id="Scratches" />
+=======
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOUSERULES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOUSERULES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOUSERULES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOUSERULES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HOUSERULES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2939,6 +3002,7 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
@@ -2961,6 +3025,8 @@
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
+=======
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -3012,6 +3078,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="EventActivities" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3026,6 +3093,12 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
+=======
+              <option name="myItemId" value="HouseRulesEvent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -3399,6 +3472,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="47a4e014-dacd-4afd-93bd-ca7f3f7ec52d" name="Default" comment="" />
@@ -3519,6 +3595,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/com/android/internal/policy/PhoneWindow.java" />
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/com/android/internal/policy/DecorContext.java" />
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/view/ContextThemeWrapper.java" />
@@ -3551,6 +3628,79 @@
     <entry file="jar://$USER_HOME$/.android/build-cache/2ee551600a3500fc826a0ab7f5fe4883166c30e8/output/jars/classes.jar!/com/google/android/gms/internal/zzbrx.class" />
     <entry file="jar://$USER_HOME$/.android/build-cache/2ee551600a3500fc826a0ab7f5fe4883166c30e8/output/jars/classes.jar!/com/google/firebase/database/DataSnapshot.class" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/HouseRulesEvent/houseRulesEvent.java">
+=======
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/view/RenderNodeAnimator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="376" column="0" selection-start-line="376" selection-start-column="0" selection-end-line="376" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/view/LayoutInflater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/ListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="311" column="0" selection-start-line="311" selection-start-column="0" selection-end-line="311" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/app/LoadedApk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/view/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="662" column="0" selection-start-line="662" selection-start-column="0" selection-end-line="662" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/content/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/com/android/internal/policy/PhoneWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="2444" column="0" selection-start-line="2444" selection-start-column="0" selection-end-line="2444" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/com/android/internal/policy/DecorContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/view/ContextThemeWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/content/res/ResourcesImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="1091" column="0" selection-start-line="1091" selection-start-column="0" selection-end-line="1091" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-24/android/content/res/Resources.java">
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
@@ -3626,9 +3776,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/MyEventsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="288">
           <caret line="96" column="56" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
           <folding />
+=======
+        <state relative-caret-position="90">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#1581#1582#0" expanded="true" />
+          </folding>
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
         </state>
       </provider>
     </entry>
@@ -3662,14 +3820,22 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/functions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_public_events.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
@@ -3678,6 +3844,83 @@
         <state relative-caret-position="238">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#2499#2774#0" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+            <element signature="e#2817#3089#0" expanded="true" />
+            <element signature="e#3088#3089#0" expanded="true" />
+            <element signature="e#3133#3406#0" expanded="true" />
+            <element signature="e#3405#3406#0" expanded="true" />
+            <element signature="e#4141#4516#0" expanded="true" />
+            <element signature="e#4515#4516#0" expanded="true" />
+          </folding>
+>>>>>>> 621bdf1b33d279a3c605483ab9050bc2908623e7
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/LoginActivities/AuthenticationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/HouseRulesData/houseRulesMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/MyEventsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1489052383000" expanded="false" signature="60:724" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/edward/cs48/houserules/EventActivities/CreateEventActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="98" column="96" selection-start-line="98" selection-start-column="96" selection-end-line="98" selection-end-column="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1875#1900#0" expanded="true" />
+            <marker date="1489456171000" expanded="false" signature="3542:3637" ph="(view) → {" />
+          </folding>
         </state>
       </provider>
     </entry>
