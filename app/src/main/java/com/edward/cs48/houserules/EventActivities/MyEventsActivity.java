@@ -91,17 +91,13 @@ public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
     }
 
     public void setup(){
-        eventNames = new ArrayList<String>(ourUser.getAttendEventMap().keySet());
+        eventNames = new ArrayList<String>(ourUser.getHostEventMap().keySet());
         String[] newEvents = eventNames.toArray(new String[ourUser.getAttendEventMap().size()]);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
         setListAdapter(adapter);
     }
 
-    private void removeEvent(houseRulesEvent removed){
-        String name = "publicEvents/"+auth.getCurrentUser().getUid()+removed.hashCode()+"/";
 
-
-    }
 
 
 }

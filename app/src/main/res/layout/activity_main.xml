@@ -17,21 +17,27 @@
         android:id="@+id/button_create_event" />
 
     <Button
+        android:id="@+id/button_public_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Public Events" />
+
+    <Button
         android:text="My Events"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_my_events" />
 
     <Button
+        android:id="@+id/button_attending_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Going" />
+
+    <Button
         android:text="My Invites"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button_my_invites" />
-
-    <Button
-        android:id="@+id/button_public_events"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Public Events" />
 
 </LinearLayout>
