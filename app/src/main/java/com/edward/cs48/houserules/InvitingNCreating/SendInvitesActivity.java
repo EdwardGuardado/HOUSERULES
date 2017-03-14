@@ -1,46 +1,27 @@
-package com.edward.cs48.houserules.EventActivities;
+package com.edward.cs48.houserules.InvitingNCreating;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.inputmethod.EditorInfo;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+
 import com.edward.cs48.houserules.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.annotation.MainThread;
-import android.support.annotation.StringRes;
-import android.support.annotation.StyleRes;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
-import com.firebase.ui.auth.*;
-import com.edward.cs48.houserules.R;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.HouseRulesUser.*;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
-import static android.R.attr.resource;
 
 /**
  * Created by Rob on 3/13/2017.

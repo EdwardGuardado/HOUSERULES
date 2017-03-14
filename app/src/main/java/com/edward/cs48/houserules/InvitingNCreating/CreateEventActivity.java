@@ -1,8 +1,6 @@
-package com.edward.cs48.houserules.EventActivities;
+package com.edward.cs48.houserules.InvitingNCreating;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -21,33 +19,23 @@ import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
 import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.R;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
-import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 
 
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-
-import static android.R.attr.data;
 
 
 public class CreateEventActivity extends AppCompatActivity  implements OnConnectionFailedListener {
@@ -124,7 +112,7 @@ public class CreateEventActivity extends AppCompatActivity  implements OnConnect
             @Override
             public void onClick(View v) {
                     try {
-                        startActivityForResult(builder.build(com.edward.cs48.houserules.EventActivities.CreateEventActivity.this), PLACE_PICKER_REQUEST);
+                        startActivityForResult(builder.build(CreateEventActivity.this), PLACE_PICKER_REQUEST);
                     } catch (GooglePlayServicesRepairableException e) {
                         e.printStackTrace();
                     } catch (GooglePlayServicesNotAvailableException e) {
@@ -144,7 +132,7 @@ public class CreateEventActivity extends AppCompatActivity  implements OnConnect
                 myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");
                 myRef.setValue(newEvent);
             }
-            startActivity(new Intent(com.edward.cs48.houserules.EventActivities.CreateEventActivity.this,MainActivity.class));
+            startActivity(new Intent(CreateEventActivity.this,MainActivity.class));
             }
         });
 
