@@ -32,6 +32,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.edward.cs48.houserules.EventActivities.PublicEventsActivity;
 import com.edward.cs48.houserules.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.android.gms.ads.AdRequest;
@@ -102,12 +103,22 @@ public class MyInvitesActivity extends AppCompatActivity implements
     private AdView mAdView;
     private FirebaseRemoteConfig mFirebaseRemoteConfig;
     private GoogleApiClient mGoogleApiClient;
+    private Button sendInvitesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_invites);
 
+        sendInvitesButton = (Button) findViewById(R.id.sendButton);
+        sendInvitesButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(com.edward.cs48.houserules.Inviting.MyInvitesActivity.this, SendInvitesActivity.class);
+                startActivity(intent);
+            }
+        });
+        
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         mUsername = ANONYMOUS;
 
@@ -199,6 +210,7 @@ public class MyInvitesActivity extends AppCompatActivity implements
         // Fetch remote config.
         fetchConfig();
 
+
     }
 
     private Action getMessageViewAction(Invite inviteMessage) {
@@ -259,7 +271,6 @@ public class MyInvitesActivity extends AppCompatActivity implements
                     public void onSuccess(Void aVoid) {
                         // Make the fetched config available via FirebaseRemoteConfig get<type> calls.
                         mFirebaseRemoteConfig.activateFetched();
-                        applyRetrievedLengthLimit();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -267,21 +278,11 @@ public class MyInvitesActivity extends AppCompatActivity implements
                     public void onFailure(@NonNull Exception e) {
                         // There has been an error fetching the config
                         Log.w(TAG, "Error fetching config: " + e.getMessage());
-                        applyRetrievedLengthLimit();
                     }
                 });
     }
 
 
-    /**
-     * Apply retrieved length limit to edit text field. This result may be fresh from the server or it may be from
-     * cached values.
-     */
-    private void applyRetrievedLengthLimit() {
-        Long friendly_msg_length = mFirebaseRemoteConfig.getLong("friendly_msg_length");
-        mMessageEditText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(friendly_msg_length.intValue())});
-        Log.d(TAG, "FML is: " + friendly_msg_length);
-    }
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {

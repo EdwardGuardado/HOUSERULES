@@ -23,4 +23,13 @@
         android:ems="10"
         android:hint="Enter a User's Email"
         android:inputType="textPersonName" />
+
+    <ListView
+        android:id="@+id/hosted_events_send"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search_btn"
+        android:layout_marginTop="11dp" />
+
 </RelativeLayout>
