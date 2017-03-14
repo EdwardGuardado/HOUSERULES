@@ -20,30 +20,32 @@
         <activity
             android:name=".LoginActivities.AuthenticationActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.AUTHENTICATION" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBSJPjjnjazMzwlfQSECSvrTvi1DIqi3V8" />
 
         <activity
             android:name=".EventActivities.CreateEventActivity"
-            android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.MyEventsActivity"
-            android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.MyInvitesActivity"
-            android:parentActivityName="com.edward.cs48.houserules.MainActivity" >
-        </activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EventActivities.PublicEventsActivity"
+            android:label="@string/title_activity_public_events"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
