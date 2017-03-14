@@ -28,4 +28,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/button_my_invites" />
 
+    <Button
+        android:id="@+id/button_public_events"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Public Events" />
+
 </LinearLayout>
