@@ -49,7 +49,6 @@ public class CreateEventActivity extends AppCompatActivity {
     private EditText houseRules;
     private CheckBox makePublic;
     private Button createEventBtn;
-    private Map<String, houseRulesEvent> publicEvents = new HashMap<String, houseRulesEvent>();
 
     private FirebaseAuth auth;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();

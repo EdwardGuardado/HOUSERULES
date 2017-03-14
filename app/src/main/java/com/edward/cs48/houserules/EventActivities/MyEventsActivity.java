@@ -102,5 +102,11 @@ public class MyEventsActivity extends ListActivity{ //AppCompatActivity {
         setListAdapter(adapter);
     }
 
+    private void removeEvent(houseRulesEvent removed){
+        String name = "publicEvents/"+auth.getCurrentUser().getUid()+removed.hashCode()+"/";
+        
+
+    }
+
 
 }
