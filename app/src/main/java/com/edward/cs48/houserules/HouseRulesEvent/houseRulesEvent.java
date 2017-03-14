@@ -23,6 +23,7 @@ public class houseRulesEvent implements Serializable {
     private String houseRules;
     private boolean Public;
     private String HostName;
+    private String HostID;
 
 
     public houseRulesEvent() {
@@ -103,6 +104,13 @@ public class houseRulesEvent implements Serializable {
         return this.HostName;
     }
 
+    public void setHostID(String hostID) {
+        HostID = hostID;
+    }
+
+    public String getHostID() {
+        return HostID;
+    }
 
     private void writeObject(
             ObjectOutputStream aOutputStream

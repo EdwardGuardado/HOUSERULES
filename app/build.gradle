@@ -31,12 +31,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-// Google
-
-// Firebase
-
-// Firebase UI
-
 // Testing dependencies
     compile 'com.android.support:design:25.1.1'
     compile 'com.github.bumptech.glide:glide:3.6.1'

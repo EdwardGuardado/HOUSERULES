@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,33 +38,23 @@ import java.util.Iterator;
 public class PublicEventsActivity extends ListActivity{ //AppCompatActivity {
 
     private static final String TAG = "PublicEventsActivity";
-    private ArrayList<String> events = new ArrayList<String>();
+    private ArrayList<houseRulesEvent> events = new ArrayList<houseRulesEvent>();
+    private ArrayList<String> eventNames = new ArrayList<String>();
+
 
     private FirebaseAuth auth;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference userReference;
-    private houseRulesUser ourUser;
+    private DatabaseReference eventsRef;
+
+    private String hostId;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         auth = FirebaseAuth.getInstance();
-        userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
         super.onCreate(savedInstanceState);
-        ValueEventListener userListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
-                ourUser = dataSnapshot.getValue(houseRulesUser.class);
-                setup();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.w("Failed to load user", "loadPost:onCancelled", databaseError.toException());
-            }
-        };
-        userReference.addValueEventListener(userListener);
+        eventsRef = userDatabase.getReference("publicEvents");
+        setup();
     }
 
 
@@ -91,15 +82,27 @@ public class PublicEventsActivity extends ListActivity{ //AppCompatActivity {
     }
 
     public void setup(){
-        for (houseRulesEvent event : ourUser.getHostEventList()) {
-            events.add(event.getName());
-        }
-        for (houseRulesEvent event : ourUser.getAttendEventList()) {
-            events.add(event.getName());
-        }
-        String[] newEvents = events.toArray(new String[events.size()]);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,newEvents);
-        setListAdapter(adapter);
+
+        eventsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    houseRulesEvent tmpEvent = snapshot.getValue(houseRulesEvent.class);
+                    if (!tmpEvent.getHostID().equals(auth.getCurrentUser().getUid())){
+                        eventNames.add(tmpEvent.getName());
+                        events.add(tmpEvent);
+                    }
+                }
+                String[] newEvents = eventNames.toArray(new String[events.size()]);
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(com.edward.cs48.houserules.EventActivities.PublicEventsActivity.this, android.R.layout.simple_list_item_1,newEvents);
+                setListAdapter(adapter);
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+
     }
 
 

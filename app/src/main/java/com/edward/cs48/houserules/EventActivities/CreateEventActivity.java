@@ -124,6 +124,7 @@ public class CreateEventActivity extends AppCompatActivity {
             newEvent.setTime(eventTime.getText().toString());
             newEvent.setHouseRules(houseRules.getText().toString());
             newEvent.setHostName(auth.getCurrentUser().getDisplayName());
+            newEvent.setHostID(auth.getCurrentUser().getUid());
         }
 
         else{
