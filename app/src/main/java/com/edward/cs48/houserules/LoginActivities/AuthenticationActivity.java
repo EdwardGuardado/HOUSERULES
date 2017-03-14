@@ -7,6 +7,7 @@ import android.support.annotation.StringRes;
 import android.support.annotation.StyleRes;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 import android.widget.ImageView;
@@ -19,8 +20,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.HouseRulesUser.*;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,10 +36,10 @@ public class AuthenticationActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 100;
     private ImageView imageView4;
     private FirebaseAuth auth;
-    private houseRulesUser user = new houseRulesUser();
+    private houseRulesUser user;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference myRef;
-    private houseRulesEvent testEvent = new houseRulesEvent();
+    private DatabaseReference userReference;
 
 
     @Override
@@ -57,7 +61,9 @@ public class AuthenticationActivity extends AppCompatActivity {
                                 new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
                         .build(),
                 RC_SIGN_IN);
-        }
+
+
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -68,17 +74,40 @@ public class AuthenticationActivity extends AppCompatActivity {
 
             // Successfully signed in
             if (resultCode == ResultCodes.OK) {
-                user.setEmail(auth.getCurrentUser().getEmail().toString());
-                user.setFullName(auth.getCurrentUser().getDisplayName().toString());
-                user.setScreenName(auth.getCurrentUser().getDisplayName().toString());
-                user.setAttendEventList(new ArrayList<houseRulesEvent>());
-                user.setHostEventList(new ArrayList<houseRulesEvent>());
-                user.setInvitedEventList(new ArrayList<houseRulesEvent>());
-                myRef.child("userdatabase").child(auth.getCurrentUser().getUid()).setValue(user);
+                userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
+
+                //I used this listener so that I can make sure the user data is savec
+                ValueEventListener userListener = new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        // Get Post object and use the values to update the UI
+                        if (dataSnapshot.getValue(houseRulesUser.class)== null){
+                            user=new houseRulesUser();
+                            user.setEmail(auth.getCurrentUser().getEmail().toString());
+                            user.setFullName(auth.getCurrentUser().getDisplayName().toString());
+                            user.setScreenName(auth.getCurrentUser().getDisplayName().toString());
+                            user.setAttendEventList(new ArrayList<houseRulesEvent>());
+                            user.setHostEventList(new ArrayList<houseRulesEvent>());
+                            user.setInvitedEventList(new ArrayList<houseRulesEvent>());
+                            myRef.child("userdatabase").child(auth.getCurrentUser().getUid()).setValue(user);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        Log.w("Failed to load user", "loadPost:onCancelled", databaseError.toException());
+                    }
+                };
+
+                //assign it to their user
+                userReference.addValueEventListener(userListener);
+
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return;
-            } else {
+            }
+
+            else {
                 // Sign in failed
                 if (response == null) {
                     // User pressed back button

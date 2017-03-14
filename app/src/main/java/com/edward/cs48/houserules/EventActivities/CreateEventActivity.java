@@ -49,13 +49,14 @@ public class CreateEventActivity extends AppCompatActivity {
     private EditText houseRules;
     private CheckBox makePublic;
     private Button createEventBtn;
-    private Map<String, Object> childUpdates = new HashMap<>();
+    private Map<String, houseRulesEvent> publicEvents = new HashMap<String, houseRulesEvent>();
 
     private FirebaseAuth auth;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference myRef;
     private DatabaseReference userReference;
     private houseRulesUser ourUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,7 +96,7 @@ public class CreateEventActivity extends AppCompatActivity {
             ourUser.addHostEvent(newEvent);
             userReference.setValue(ourUser);
             if (newEvent.getPrivacy()){
-                myRef = userDatabase.getReference("publicEvents/user/"+ auth.getCurrentUser().getUid()+ "/" + newEvent.getName());
+                myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");
                 myRef.setValue(newEvent);
             }
             startActivity(new Intent(com.edward.cs48.houserules.EventActivities.CreateEventActivity.this,MainActivity.class));
