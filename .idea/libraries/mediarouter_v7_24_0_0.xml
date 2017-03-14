@@ -1,12 +1,16 @@
 <component name="libraryTable">
   <library name="mediarouter-v7-24.0.0">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.android/build-cache/b754794a3d2d16b16fa26fa489396d0b196ac1c7/output/annotations.zip!/" />
+    </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.android/build-cache/bd36b31eaa71af3b209ea6446625c11bbd1d0a61/output/jars/libs/internal_impl-24.0.0.jar!/" />
-      <root url="jar://$USER_HOME$/.android/build-cache/bd36b31eaa71af3b209ea6446625c11bbd1d0a61/output/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.android/build-cache/bd36b31eaa71af3b209ea6446625c11bbd1d0a61/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/b754794a3d2d16b16fa26fa489396d0b196ac1c7/output/jars/libs/internal_impl-24.0.0.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/b754794a3d2d16b16fa26fa489396d0b196ac1c7/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/b754794a3d2d16b16fa26fa489396d0b196ac1c7/output/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/mediarouter-v7/24.0.0/mediarouter-v7-24.0.0-sources.jar!/" />
       <root url="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/mediarouter-v7/24.0.0/mediarouter-v7-24.0.0-sources.jar!/" />
     </SOURCES>
   </library>
