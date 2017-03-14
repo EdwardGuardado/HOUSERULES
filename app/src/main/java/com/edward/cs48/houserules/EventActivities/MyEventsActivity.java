@@ -110,12 +110,5 @@ public class MyEventsActivity extends AppCompatActivity {
     private void removeEvent(houseRulesEvent removed) {
         String name = "publicEvents/" + auth.getCurrentUser().getUid() + removed.hashCode() + "/";
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    */
 }
 
-=======
-}
->>>>>>> 5deb858bedff33b5c485211df0b3a7195635f0c0
