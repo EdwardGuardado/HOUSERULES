@@ -145,6 +145,8 @@ public class houseRulesUser implements Serializable {
         this.invitedEventMap = invitedEventMap;
     }
 
+
+
     private void readObject(ObjectInputStream aInputStream
     ) throws ClassNotFoundException, IOException {
         //always perform the default de-serialization first

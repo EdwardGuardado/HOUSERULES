@@ -11,8 +11,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.edward.cs48.houserules.EventActivities.AttendEventsActivity;
-import com.edward.cs48.houserules.EventActivities.CreateEventActivity;
+import com.edward.cs48.houserules.EventActivities.CreateEditEvents.CreateEventActivity;
 import com.edward.cs48.houserules.EventActivities.MyEventsActivity;
+import com.edward.cs48.houserules.EventActivities.PublicEvent.PublicEventsMapActivity;
 import com.edward.cs48.houserules.Inviting.MyInvitesActivity;
 import com.edward.cs48.houserules.EventActivities.PublicEvent.PublicEventsActivity;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         btnPublicEvents.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, PublicEventsActivity.class);
+                Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, PublicEventsMapActivity.class);
                 startActivity(intent);
             }
         });

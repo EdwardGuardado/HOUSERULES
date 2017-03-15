@@ -1,29 +1,21 @@
 {
   "project_info": {
-    "project_number": "636840971090",
-    "firebase_url": "https://houserules-5973d.firebaseio.com",
-    "project_id": "houserules-5973d",
-    "storage_bucket": "houserules-5973d.appspot.com"
+    "project_number": "980528732909",
+    "firebase_url": "https://houserules-33f22.firebaseio.com",
+    "project_id": "houserules-33f22",
+    "storage_bucket": "houserules-33f22.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:636840971090:android:e821dbd84571351c",
+        "mobilesdk_app_id": "1:980528732909:android:e821dbd84571351c",
         "android_client_info": {
           "package_name": "com.edward.cs48.houserules"
         }
       },
       "oauth_client": [
         {
-          "client_id": "636840971090-a9cq4d0gbuda91mjuc8dirqcqq4pdjta.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.edward.cs48.houserules",
-            "certificate_hash": "28458b708a76f8b87cdf374049577c46a7804225"
-          }
-        },
-        {
-          "client_id": "636840971090-3h5gseb4va6utc6f2e0fc5hsq2hng0gq.apps.googleusercontent.com",
+          "client_id": "980528732909-kd7q73e6fi4elhuu0jtao4mjq0e54495.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.edward.cs48.houserules",
@@ -31,13 +23,13 @@
           }
         },
         {
-          "client_id": "636840971090-n6hsubs8nmuf8nh7jrk7ksbmsc2sd4mq.apps.googleusercontent.com",
+          "client_id": "980528732909-of2d95g5jc5g2b7vjs1auv6r0est7ekj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDppkznhFBbRUA5sr39I0ZT3W4yhsciGbY"
+          "current_key": "AIzaSyAGoPg1lzmdu4KbHqW7bF4BGZKUnlnHs9s"
         }
       ],
       "services": {
@@ -48,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "636840971090-n6hsubs8nmuf8nh7jrk7ksbmsc2sd4mq.apps.googleusercontent.com",
+              "client_id": "980528732909-of2d95g5jc5g2b7vjs1auv6r0est7ekj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -31,7 +31,6 @@ public class PublicEventsActivity extends ListActivity{ //AppCompatActivity {
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference eventsRef;
 
-    private String hostId;
 
 
     @Override
