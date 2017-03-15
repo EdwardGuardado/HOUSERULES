@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package com.edward.cs48.houserules.EventActivities.PublicEvent;
+//Obtained From Google
+
+package com.edward.cs48.houserules.Permissions;
 
 import android.Manifest;
 import android.app.AlertDialog;

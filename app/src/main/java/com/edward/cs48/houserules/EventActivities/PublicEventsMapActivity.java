@@ -1,22 +1,17 @@
-package com.edward.cs48.houserules.EventActivities.PublicEvent;
+package com.edward.cs48.houserules.EventActivities;
 
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.Toast;
 
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
-import com.edward.cs48.houserules.Manifest;
+import com.edward.cs48.houserules.Permissions.PermissionUtils;
 import com.edward.cs48.houserules.R;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;

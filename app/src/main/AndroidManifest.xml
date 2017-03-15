@@ -33,8 +33,6 @@ package="com.edward.cs48.houserules">
         android:parentActivityName=".MainActivity" />
     <activity android:name=".EventActivities.MyEventsActivity" android:parentActivityName=".MainActivity" />
     <activity android:name=".Inviting.MyInvitesActivity" android:parentActivityName=".MainActivity" />
-    <activity android:name=".EventActivities.PublicEvent.PublicEventsActivity" android:label="@string/title_activity_public_events"
-        android:parentActivityName=".MainActivity" />
     <activity android:name=".Inviting.SendInvitesActivity"
         android:parentActivityName=".Inviting.MyInvitesActivity" />
 
@@ -46,7 +44,7 @@ package="com.edward.cs48.houserules">
         android:parentActivityName=".EventActivities.MyEventsActivity" />
 
 
-    <activity android:name="com.edward.cs48.houserules.EventActivities.PublicEvent.PublicEventsMapActivity"
+    <activity android:name="com.edward.cs48.houserules.EventActivities.PublicEventsMapActivity"
         android:label="@string/title_activity_public_events_map"
         android:parentActivityName=".MainActivity">
 
