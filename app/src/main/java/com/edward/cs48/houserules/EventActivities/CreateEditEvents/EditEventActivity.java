@@ -166,10 +166,10 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
             @Override
             public void onClick(View view) {
                 newEvent.setName(originalEventName);
-                ourUser.addHostEvent(newEvent);
-                userReference.setValue(ourUser);
                 removeEvent(newEvent);
                 makeEvent();
+                ourUser.addHostEvent(newEvent);
+                userReference.setValue(ourUser);
                 if (newEvent.getPrivacy()){
                     myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.getName()+"/");
                     myRef.setValue(newEvent);
