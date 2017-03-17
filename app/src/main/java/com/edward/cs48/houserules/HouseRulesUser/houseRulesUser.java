@@ -161,5 +161,15 @@ public class houseRulesUser implements Serializable {
         aOutputStream.defaultWriteObject();
     }
 
+    private houseRulesEvent getEventFromHost(String name){
+        return this.hostEventMap.get((String)name);
+    }
 
+    private houseRulesEvent getEventFromAttend(String name){
+        return this.attendEventMap.get((String)name);
+    }
+
+    private houseRulesEvent getEventFromInvite(String name){
+        return this.invitedEventMap.get((String)name);
+    }
 }

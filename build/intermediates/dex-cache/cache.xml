@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_cce3d658e1e8bd67a39d9a1fc3b63f7300710bf8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ab3acf647d36ba2b135026d783b312317db5eae0">
+        <dex dex="C:\Users\Daniel\Documents\GitHub\HOUSERULES\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_bf77a469ae59808ab535caa2b98761bd4ffeedfc\classes.dex" />
+    </item>
+
+</items>

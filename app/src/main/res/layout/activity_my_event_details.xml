@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+    <TextView
+        android:id="@+id/my_event_details_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Event Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_weight="0.04"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/my_event_details_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="Event Host"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/my_event_details_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="Event Location"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/my_event_details_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="Event Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/my_event_details_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="Event Time"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="16dp"/>
+
+    <Button
+        android:id="@+id/my_event_details_edit_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="Edit Event"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="16dp"/>
+
+    <Button
+        android:id="@+id/my_event_details_send_invites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.04"
+        android:text="Send Invites"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:paddingLeft="16dp"/>
+</LinearLayout>

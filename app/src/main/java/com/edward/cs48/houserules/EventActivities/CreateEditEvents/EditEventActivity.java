@@ -34,13 +34,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
+import java.util.Map;
 
 public class EditEventActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     Calendar dateTime = Calendar.getInstance();
-    private houseRulesEvent newEvent = new houseRulesEvent();
+    private houseRulesEvent newEvent;
     private EditText eventName;
     private EditText eventDate;
     private EditText eventTime;
@@ -57,6 +58,7 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
     private DatabaseReference myRef;
     private DatabaseReference userReference;
     private houseRulesUser ourUser;
+    private Map<String,houseRulesEvent> userEvents;
     private GoogleApiClient mGoogleApiClient;
     private PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
 
@@ -65,13 +67,10 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         auth = FirebaseAuth.getInstance();
         userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
 
         setContentView(R.layout.activity_create_event);
-
-
 
         mGoogleApiClient = new GoogleApiClient
                 .Builder(this)
@@ -79,6 +78,18 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
                 .addApi(Places.PLACE_DETECTION_API)
                 .enableAutoManage(this, this)
                 .build();
+        eventName = (EditText) findViewById(R.id.ed_event_name);
+        eventDate = (EditText) findViewById(R.id.ed_event_date);
+        eventTime = (EditText) findViewById(R.id.ed_event_time);
+        pickAPlaceButton = (Button) findViewById(R.id.ed_place_picker_create);
+        houseRules = ((EditText) findViewById(R.id.ed_event_rules));
+        makePublic = (CheckBox) findViewById(R.id.ed_event_privacy);
+
+        changeEvent = (Button) findViewById(R.id.save_changes);
+
+        removeBtn = (Button) findViewById(R.id.remove_event);
+
+
 
 
         originalEventName = getIntent().getExtras().getString("eventShared");
@@ -88,30 +99,22 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
                 ourUser = dataSnapshot.getValue(houseRulesUser.class);
-                newEvent = ourUser.getHostEventMap().get(originalEventName);
+                userEvents = ourUser.getHostEventMap();
+                newEvent = userEvents.get((String)originalEventName);
+                String namerr = newEvent.getName();
+                System.out.println(namerr);
+                eventName.setText(namerr);
 
-                eventName = (EditText) findViewById(R.id.ed_event_name);
-                eventName.setText(newEvent.getName());
-
-                eventDate = (EditText) findViewById(R.id.ed_event_date);
                 eventDate.setText(newEvent.getDate());
 
-                pickAPlaceButton = (Button) findViewById(R.id.ed_place_picker_create);
 
-                eventTime = (EditText) findViewById(R.id.ed_event_time);
                 eventTime.setText(newEvent.getTime());
 
-                houseRules = ((EditText) findViewById(R.id.ed_event_rules));
                 houseRules.setText(newEvent.getHouseRules());
 
-                makePublic = (CheckBox) findViewById(R.id.ed_event_privacy);
                 if (newEvent.getPrivacy()){
                     makePublic.setChecked(true);
                 }
-
-                changeEvent = (Button) findViewById(R.id.save_changes);
-
-                removeBtn = (Button) findViewById(R.id.remove_event);
 
                 pickAPlaceButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -125,6 +128,19 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
                         }
                     }
 
+                });
+
+
+                makePublic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        if (buttonView.isChecked()){
+                            newEvent.setPrivacy(true);
+                        }
+                        else{
+                            newEvent.setPrivacy(false);
+                        }
+                    }
                 });
 
                 changeEvent.setOnClickListener(new View.OnClickListener() {
@@ -154,17 +170,6 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
                 });
 
 
-                makePublic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (buttonView.isChecked()){
-                            newEvent.setPrivacy(true);
-                        }
-                        else{
-                            newEvent.setPrivacy(false);
-                        }
-                    }
-                });
 
 
             }
