@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
+import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -84,6 +85,11 @@ public class MyEventsActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(MyEventsActivity.this, viewHolder.my_event_name.getText().toString(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MyEventsActivity.this, MainActivity.class);
+                        Bundle my_event_bundle = new Bundle();
+                        my_event_bundle.putString("My_Event", viewHolder.my_event_name.getText().toString());
+                        intent.putExtras(my_event_bundle);
+                        startActivity(intent);
                     }
                 });
             }
