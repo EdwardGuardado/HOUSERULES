@@ -55,16 +55,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.48"
-        android:text="House Rules" />
+        android:text="House Rules"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
     <Button
-        android:id="@+id/add_event"
+        android:id="@+id/leave_event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.04"
         android:gravity="center"
         android:paddingLeft="16dp"
-        android:text="I WANNA GO!"
+        android:text="LEAVE THIS EVENT"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </LinearLayout>

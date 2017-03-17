@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edward.cs48.houserules.EventActivities.CreateEditEvents.LeaveActivity;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
 import com.edward.cs48.houserules.R;
@@ -63,7 +64,7 @@ public class AttendEventsActivity extends AppCompatActivity {
             mUserName = mFirebaseUser.getDisplayName();
         }
 
-        mEventRecyclerView = (RecyclerView) findViewById(R.id.myEventsRecyclerView);
+        mEventRecyclerView = (RecyclerView) findViewById(R.id.attEventsRecyclerView);
         mLinearLayoutManager = new LinearLayoutManager(this);
         mLinearLayoutManager.setStackFromEnd(false);
 
@@ -71,7 +72,7 @@ public class AttendEventsActivity extends AppCompatActivity {
         //userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
         mFirebaseAdapter = new FirebaseRecyclerAdapter<houseRulesEvent, EventViewHolder>(
                 houseRulesEvent.class,
-                R.layout.activity_my_events_element,
+                R.layout.events_element,
                 EventViewHolder.class,
                 mFirebaseDatabaseReference.child("user/userdatabase/" + mFirebaseAuth.getCurrentUser().getUid() + "/attendEventMap")) {
             protected void populateViewHolder(final EventViewHolder viewHolder, houseRulesEvent model, int position) {
@@ -82,9 +83,9 @@ public class AttendEventsActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Toast.makeText(AttendEventsActivity.this, viewHolder.my_event_name.getText().toString(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(AttendEventsActivity.this, AttendEventsActivity.class);
+                        Intent intent = new Intent(AttendEventsActivity.this, LeaveActivity.class);
                         Bundle my_event_bundle = new Bundle();
-                        my_event_bundle.putString("My_Event", viewHolder.my_event_name.getText().toString());
+                        my_event_bundle.putString("eventName", viewHolder.my_event_name.getText().toString());
                         intent.putExtras(my_event_bundle);
                         startActivity(intent);
                     }

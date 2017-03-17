@@ -115,4 +115,3 @@ public class MyEventDetailsActivity extends AppCompatActivity {
         mEventRules.setText(ourEvent.getHouseRules());
     }
 }
-

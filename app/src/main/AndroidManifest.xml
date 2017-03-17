@@ -53,7 +53,7 @@
             android:parentActivityName=".Inviting.MyInvitesActivity" />
         <activity
             android:name=".EventActivities.AttendEventsActivity"
-            android:label="@string/title_activity_attend_events"
+            android:label="Events You Are Going To"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.CreateEditEvents.EditEventActivity"
@@ -64,8 +64,9 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EventActivities.MyEvents.MyEventDetailsActivity"
-            android:parentActivityName=".EventActivities.MyEvents.MyEventsActivity"></activity>
-        <activity android:name=".EventActivities.PublicEvents.PublicEventDetails"></activity>
+            android:parentActivityName=".EventActivities.MyEvents.MyEventsActivity" />
+        <activity android:name=".EventActivities.PublicEvents.PublicEventDetails" />
+        <activity android:name=".EventActivities.CreateEditEvents.LeaveActivity"></activity>
     </application>
 
 </manifest>

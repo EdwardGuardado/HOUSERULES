@@ -1,4 +1,4 @@
-package com.edward.cs48.houserules.EventActivities.PublicEvents;
+package com.edward.cs48.houserules.EventActivities.CreateEditEvents;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
+import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.R;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -22,25 +23,25 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class PublicEventDetails extends AppCompatActivity {
+public class LeaveActivity extends AppCompatActivity {
 
     private static final String TAG = "MyEventDetailsActivity";
     private TextView mEventName, mEventHost, mEventLocation, mEventDate, mEventTime, houseRules;
-    private Button btnAdd;
+    private Button btnLeave;
     private FirebaseUser mFirebaseUser;
     private FirebaseAuth mFirebaseAuth;
     private String eventName;
     private houseRulesEvent eventFor;
     private houseRulesUser  ourUser;
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference eventsRef, userRef;
+    private DatabaseReference  userRef;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_public_event_details);
+        setContentView(R.layout.activity_leave);
 
         eventName = getIntent().getExtras().getString("eventName");
         // Initialize Firebase Auth
@@ -54,7 +55,6 @@ public class PublicEventDetails extends AppCompatActivity {
             return;
         }
 
-        eventsRef = userDatabase.getReference("publicEvents/"+eventName+"/");
         userRef = userDatabase.getReference("user/userdatabase/"+ mFirebaseAuth.getCurrentUser().getUid() + "/");
 
         mEventName = (TextView) findViewById(R.id.pub_event_details_name);
@@ -63,7 +63,7 @@ public class PublicEventDetails extends AppCompatActivity {
         mEventDate = (TextView) findViewById(R.id.pub_event_details_date);
         mEventTime = (TextView) findViewById(R.id.pub_event_details_time);
         houseRules = (TextView) findViewById(R.id.pub_event_details_houserules);
-        btnAdd = (Button) findViewById(R.id.add_event);
+        btnLeave = (Button) findViewById(R.id.leave_event);
         setup();
     }
 
@@ -75,28 +75,18 @@ public class PublicEventDetails extends AppCompatActivity {
 
     public void setup(){
         //Reading Nodes of public event dataBase
-        eventsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        userRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                eventFor = dataSnapshot.getValue(houseRulesEvent.class);
+                ourUser = dataSnapshot.getValue(houseRulesUser.class);
+                eventFor = ourUser.getAttendEventMap().get(eventName);
                 mEventHost.setText(eventFor.getHostName());
                 mEventLocation.setText(eventFor.getAddress());
                 mEventName.setText(eventFor.getName());
                 mEventDate.setText(eventFor.getDate());
                 mEventTime.setText(eventFor.getTime());
                 houseRules.setText(eventFor.getHouseRules());
-
-                userRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        ourUser = dataSnapshot.getValue(houseRulesUser.class);
-                        setUpClick();
-                    }
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                    }
-
-                });
+                setUpClick();
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -106,12 +96,12 @@ public class PublicEventDetails extends AppCompatActivity {
     }
 
     private void setUpClick(){
-        btnAdd.setOnClickListener(new View.OnClickListener() {
+        btnLeave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ourUser.addAttendEvent(eventFor);
+                ourUser.removeAttendEvent(eventFor);
                 userRef.setValue(ourUser);
-                Intent intent = new Intent(PublicEventDetails.this, com.edward.cs48.houserules.EventActivities.AttendEventsActivity.class);
+                Intent intent = new Intent(LeaveActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

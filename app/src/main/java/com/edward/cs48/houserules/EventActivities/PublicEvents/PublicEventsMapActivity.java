@@ -1,5 +1,7 @@
 package com.edward.cs48.houserules.EventActivities.PublicEvents;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -7,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
@@ -18,6 +21,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -45,7 +49,7 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
     private DatabaseReference eventsRef;
     private Map<String,houseRulesEvent> events = new HashMap<String, houseRulesEvent>();
     private Map<String,MarkerOptions> eventsMarkers = new HashMap<String, MarkerOptions>();
-    private Map<MarkerOptions,houseRulesEvent> eventsByMarker = new HashMap<MarkerOptions, houseRulesEvent>()
+    private Map<MarkerOptions,houseRulesEvent> eventsByMarker = new HashMap<MarkerOptions, houseRulesEvent>();
 
 
 
@@ -70,6 +74,21 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
         CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
+
+        mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+
+            @Override
+            public void onInfoWindowClick(Marker arg0) {
+                Intent intent = new Intent(PublicEventsMapActivity.this, PublicEventDetails.class);
+                String title = arg0.getTitle();
+                String hostID = eventsByMarker.get(eventsMarkers.get(title)).getHostID();
+                String hash = "" + eventsByMarker.get(eventsMarkers.get(title)).getName();
+                String all = hostID+hash;
+                System.out.println(all);
+                intent.putExtra("eventName",all);
+                startActivity(intent);
+            }
+        });
 
     }
 
@@ -147,8 +166,10 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
                     if (!tmpEvent.getHostID().equals(auth.getCurrentUser().getUid())){
                         events.put(tmpEvent.getName(),tmpEvent);
                         LatLng temp = new LatLng(tmpEvent.getLat(), tmpEvent.getLon());
-                        MarkerOptions fact = new MarkerOptions();
-                        mMap.addMarker(new MarkerOptions().position(temp).title(tmpEvent.getName() + " - " + tmpEvent.getDate()));
+                        MarkerOptions tmp = new MarkerOptions().position(temp).title(tmpEvent.getName() + " - " + tmpEvent.getDate());
+                        eventsMarkers.put(tmpEvent.getName() + " - " + tmpEvent.getDate(),tmp);
+                        eventsByMarker.put(tmp,tmpEvent);
+                        mMap.addMarker(tmp);
                     }
                 }
             }
@@ -157,6 +178,8 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
             }
         });
     }
+
+
 
 
 }

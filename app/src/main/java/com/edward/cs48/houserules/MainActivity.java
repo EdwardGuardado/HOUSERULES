@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.edward.cs48.houserules.EventActivities.AttendEventsActivity;
 import com.edward.cs48.houserules.EventActivities.CreateEditEvents.CreateEventActivity;
 import com.edward.cs48.houserules.EventActivities.MyEvents.MyEventsActivity;
 import com.edward.cs48.houserules.EventActivities.PublicEvents.PublicEventsMapActivity;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         btnCreateEvent = (Button) findViewById(R.id.button_create_event);
         btnMyEvents = (Button) findViewById(R.id.button_my_events);
         btnPublicEvents = (Button) findViewById(R.id.button_public_events);
+        btnAttendingEvents = (Button) findViewById(R.id.button_attending_events);
 
 
         btnCreateEvent.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +84,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnAttendingEvents.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, AttendEventsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
     @Override

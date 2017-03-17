@@ -53,10 +53,9 @@
         android:id="@+id/my_event_details_rules"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.04"
-        android:text="Event Rules"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:paddingLeft="16dp"/>
+        android:layout_weight="0.48"
+        android:text="House Rules" />
+
 
     <Button
         android:id="@+id/my_event_details_edit_event"

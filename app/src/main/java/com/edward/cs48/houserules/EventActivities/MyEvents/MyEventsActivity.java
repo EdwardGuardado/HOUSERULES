@@ -71,7 +71,7 @@ public class MyEventsActivity extends AppCompatActivity {
         //userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
         mFirebaseAdapter = new FirebaseRecyclerAdapter<houseRulesEvent, EventViewHolder>(
                 houseRulesEvent.class,
-                R.layout.activity_my_events_element,
+                R.layout.events_element,
                 EventViewHolder.class,
                 mFirebaseDatabaseReference.child("user/userdatabase/" + mFirebaseAuth.getCurrentUser().getUid() + "/hostEventMap")) {
             protected void populateViewHolder(final EventViewHolder viewHolder, houseRulesEvent model, int position) {

@@ -128,7 +128,7 @@ public class CreateEventActivity extends AppCompatActivity  implements OnConnect
             ourUser.addHostEvent(newEvent);
             userReference.setValue(ourUser);
             if (newEvent.getPrivacy()){
-                myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");
+                myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.getName()+"/");
                 myRef.setValue(newEvent);
             }
             startActivity(new Intent(CreateEventActivity.this,MainActivity.class));

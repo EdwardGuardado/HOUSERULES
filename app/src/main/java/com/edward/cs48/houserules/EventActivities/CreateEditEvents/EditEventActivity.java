@@ -119,7 +119,10 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
         } else {
             eventName.setError(null);
         }
-
+        if (newEvent.getLon()==0 && newEvent.getLat()==0){
+            pickAPlaceButton.setError("Required.");
+            valid=false;
+        }
 
         return valid;
     }
@@ -163,12 +166,12 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
             @Override
             public void onClick(View view) {
                 newEvent.setName(originalEventName);
-                removeEvent(newEvent);
-                makeEvent();
                 ourUser.addHostEvent(newEvent);
                 userReference.setValue(ourUser);
+                removeEvent(newEvent);
+                makeEvent();
                 if (newEvent.getPrivacy()){
-                    myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");
+                    myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.getName()+"/");
                     myRef.setValue(newEvent);
                 }
                 startActivity(new Intent(EditEventActivity.this,MainActivity.class));
@@ -244,11 +247,9 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
 
 
     private void removeEvent(final houseRulesEvent removed) {
-        if (removed.getPrivacy()==true) {
-            String name = auth.getCurrentUser().getUid() + removed.hashCode();
+            String name = auth.getCurrentUser().getUid() + removed.getName();
             DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference("publicEvents");
             eventsRef.child(name).removeValue();
-        }
-        ourUser.removeHostEvent(removed);
+            ourUser.removeHostEvent(removed);
     }
 }
