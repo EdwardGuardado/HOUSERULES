@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
         }
         btnCreateEvent = (Button) findViewById(R.id.button_create_event);
         btnMyEvents = (Button) findViewById(R.id.button_my_events);
-        btnAttendingEvents = (Button) findViewById(R.id.button_attending_events);
-        btnMyInvites = (Button) findViewById(R.id.button_my_invites);
         btnPublicEvents = (Button) findViewById(R.id.button_public_events);
 
 
@@ -78,21 +76,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnMyInvites.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, MyInvitesActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        btnAttendingEvents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(com.edward.cs48.houserules.MainActivity.this, AttendEventsActivity.class);
-                startActivity(intent);
-            }
-        });
 
         btnPublicEvents.setOnClickListener(new View.OnClickListener(){
             @Override

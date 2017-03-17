@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.Permissions.PermissionUtils;
 import com.edward.cs48.houserules.R;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -60,6 +62,10 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
         mMap.setOnMyLocationButtonClickListener(this);
         enableMyLocation();
         setup();
+        CameraUpdate center= CameraUpdateFactory.newLatLng(new LatLng(34.4161308,-119.8468366));
+        CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
+        mMap.moveCamera(center);
+        mMap.animateCamera(zoom);
 
     }
 
@@ -137,7 +143,7 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
                     if (!tmpEvent.getHostID().equals(auth.getCurrentUser().getUid())){
                         events.put(tmpEvent.getName(),tmpEvent);
                         LatLng temp = new LatLng(tmpEvent.getLat(), tmpEvent.getLon());
-                        mMap.addMarker(new MarkerOptions().position(temp).title(tmpEvent.getName() + " - " + tmpEvent.getAddress()));
+                        mMap.addMarker(new MarkerOptions().position(temp).title(tmpEvent.getName() + " - " + tmpEvent.getDate()));
                     }
                 }
             }
