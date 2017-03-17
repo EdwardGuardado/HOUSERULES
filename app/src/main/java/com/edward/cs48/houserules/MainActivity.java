@@ -10,11 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.edward.cs48.houserules.EventActivities.AttendEventsActivity;
 import com.edward.cs48.houserules.EventActivities.CreateEditEvents.CreateEventActivity;
-import com.edward.cs48.houserules.EventActivities.MyEventsActivity;
-import com.edward.cs48.houserules.EventActivities.PublicEventsMapActivity;
-import com.edward.cs48.houserules.Inviting.MyInvitesActivity;
+import com.edward.cs48.houserules.EventActivities.MyEvents.MyEventsActivity;
+import com.edward.cs48.houserules.EventActivities.PublicEvents.PublicEventsMapActivity;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
