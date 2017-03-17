@@ -44,6 +44,10 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
     private FirebaseDatabase userDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference eventsRef;
     private Map<String,houseRulesEvent> events = new HashMap<String, houseRulesEvent>();
+    private Map<String,MarkerOptions> eventsMarkers = new HashMap<String, MarkerOptions>();
+    private Map<MarkerOptions,houseRulesEvent> eventsByMarker = new HashMap<MarkerOptions, houseRulesEvent>()
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,6 +147,7 @@ public class PublicEventsMapActivity extends AppCompatActivity implements
                     if (!tmpEvent.getHostID().equals(auth.getCurrentUser().getUid())){
                         events.put(tmpEvent.getName(),tmpEvent);
                         LatLng temp = new LatLng(tmpEvent.getLat(), tmpEvent.getLon());
+                        MarkerOptions fact = new MarkerOptions();
                         mMap.addMarker(new MarkerOptions().position(temp).title(tmpEvent.getName() + " - " + tmpEvent.getDate()));
                     }
                 }

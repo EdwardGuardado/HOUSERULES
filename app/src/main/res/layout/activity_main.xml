@@ -34,6 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Public Events" />
+        <Button
+            android:id="@+id/button_attending_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Going" />
 
         <Button
             android:text="My Events"
