@@ -5,21 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.edward.cs48.houserules.EventActivities.CreateEditEvents.EditEventActivity;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
-import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
 import com.edward.cs48.houserules.LoginActivities.AuthenticationActivity;
 import com.edward.cs48.houserules.R;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.ui.PlacePicker;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -34,12 +28,14 @@ public class MyEventsActivity extends AppCompatActivity {
         public TextView my_event_name;
         public TextView my_event_host_name;
         public TextView my_event_address;
+        View mView;
 
         public EventViewHolder(View v) {
             super(v);
             my_event_name = (TextView) itemView.findViewById(R.id.my_event_name);
             my_event_host_name = (TextView) itemView.findViewById(R.id.my_event_host_name);
             my_event_address = (TextView) itemView.findViewById(R.id.my_event_address);
+            mView = v;
         }
     }
 
@@ -80,10 +76,16 @@ public class MyEventsActivity extends AppCompatActivity {
                 R.layout.activity_my_events_element,
                 EventViewHolder.class,
                 mFirebaseDatabaseReference.child("user/userdatabase/" + mFirebaseAuth.getCurrentUser().getUid() + "/hostEventMap")) {
-            protected void populateViewHolder(EventViewHolder viewHolder, houseRulesEvent model, int position) {
+            protected void populateViewHolder(final EventViewHolder viewHolder, houseRulesEvent model, int position) {
                 viewHolder.my_event_name.setText(model.getName());
                 viewHolder.my_event_host_name.setText(model.getHostName());
                 viewHolder.my_event_address.setText(model.getAddress());
+                viewHolder.mView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(MyEventsActivity.this, viewHolder.my_event_name.getText().toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         };
 
@@ -107,13 +109,7 @@ public class MyEventsActivity extends AppCompatActivity {
     @Override
     protected void onPause() { super.onPause(); }
 
-
-    private void editEvent(final houseRulesEvent edited){
-        Intent editIntent = new Intent(this, EditEventActivity.class);
-        editIntent.putExtra("eventShared",edited.getName());
-        startActivity(editIntent);
+    private void removeEvent(houseRulesEvent removed) {
+        String name = "publicEvents/" + mFirebaseAuth.getCurrentUser().getUid() + removed.hashCode() + "/";
     }
-
-
-
 }
