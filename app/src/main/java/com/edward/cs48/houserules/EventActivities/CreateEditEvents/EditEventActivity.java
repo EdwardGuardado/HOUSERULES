@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.edward.cs48.houserules.EventActivities.MyEventsActivity;
 import com.edward.cs48.houserules.HouseRulesEvent.houseRulesEvent;
 import com.edward.cs48.houserules.HouseRulesUser.houseRulesUser;
+import com.edward.cs48.houserules.MainActivity;
 import com.edward.cs48.houserules.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -26,6 +27,8 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -70,7 +73,7 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
         auth = FirebaseAuth.getInstance();
         userReference = userDatabase.getReference("user/userdatabase/"+ auth.getCurrentUser().getUid() + "/");
 
-        setContentView(R.layout.activity_create_event);
+        setContentView(R.layout.activity_edit_event);
 
         mGoogleApiClient = new GoogleApiClient
                 .Builder(this)
@@ -78,108 +81,18 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
                 .addApi(Places.PLACE_DETECTION_API)
                 .enableAutoManage(this, this)
                 .build();
+
         eventName = (EditText) findViewById(R.id.ed_event_name);
         eventDate = (EditText) findViewById(R.id.ed_event_date);
         eventTime = (EditText) findViewById(R.id.ed_event_time);
         pickAPlaceButton = (Button) findViewById(R.id.ed_place_picker_create);
         houseRules = ((EditText) findViewById(R.id.ed_event_rules));
         makePublic = (CheckBox) findViewById(R.id.ed_event_privacy);
-
         changeEvent = (Button) findViewById(R.id.save_changes);
-
         removeBtn = (Button) findViewById(R.id.remove_event);
 
-
-
-
         originalEventName = getIntent().getExtras().getString("eventShared");
-
-        ValueEventListener userListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
-                ourUser = dataSnapshot.getValue(houseRulesUser.class);
-                userEvents = ourUser.getHostEventMap();
-                newEvent = userEvents.get((String)originalEventName);
-                String namerr = newEvent.getName();
-                System.out.println(namerr);
-                eventName.setText(namerr);
-
-                eventDate.setText(newEvent.getDate());
-
-
-                eventTime.setText(newEvent.getTime());
-
-                houseRules.setText(newEvent.getHouseRules());
-
-                if (newEvent.getPrivacy()){
-                    makePublic.setChecked(true);
-                }
-
-                pickAPlaceButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        try {
-                            startActivityForResult(builder.build(EditEventActivity.this), PLACE_PICKER_REQUEST);
-                        } catch (GooglePlayServicesRepairableException e) {
-                            e.printStackTrace();
-                        } catch (GooglePlayServicesNotAvailableException e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                });
-
-
-                makePublic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                    @Override
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (buttonView.isChecked()){
-                            newEvent.setPrivacy(true);
-                        }
-                        else{
-                            newEvent.setPrivacy(false);
-                        }
-                    }
-                });
-
-                changeEvent.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        newEvent.setName(originalEventName);
-                        removeEvent(newEvent);
-                        makeEvent();
-                        ourUser.addHostEvent(newEvent);
-                        userReference.setValue(ourUser);
-                        if (newEvent.getPrivacy()){
-                            myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");
-                            myRef.setValue(newEvent);
-                        }
-                        startActivity(new Intent(EditEventActivity.this,MyEventsActivity.class));
-                    }
-                });
-
-                removeBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        newEvent.setName(originalEventName);
-                        removeEvent(newEvent);
-                        userReference.setValue(ourUser);
-                        startActivity(new Intent(EditEventActivity.this,MyEventsActivity.class));
-                    }
-                });
-
-
-
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.w("Failed to load user", "loadPost:onCancelled", databaseError.toException());
-            }
-        };
-        userReference.addValueEventListener(userListener);
+        setupDeps();
 
     }
 
@@ -214,8 +127,84 @@ public class EditEventActivity extends AppCompatActivity implements GoogleApiCli
         return valid;
     }
 
+    private void setUp(){
+        eventName.setText(newEvent.getName());
+        eventDate.setText(newEvent.getDate());
+        eventTime.setText(newEvent.getTime());
+        houseRules.setText(newEvent.getHouseRules());
 
+        if (newEvent.getPrivacy()){
+            makePublic.setChecked(true);
+        }
+        pickAPlaceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivityForResult(builder.build(EditEventActivity.this), PLACE_PICKER_REQUEST);
+                } catch (GooglePlayServicesRepairableException e) {
+                    e.printStackTrace();
+                } catch (GooglePlayServicesNotAvailableException e) {
+                    e.printStackTrace();
+                }
+            }
 
+        });
+
+        makePublic.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (buttonView.isChecked()){
+                    newEvent.setPrivacy(true);
+                }
+                else{
+                    newEvent.setPrivacy(false);
+                }
+            }
+        });
+
+        changeEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newEvent.setName(originalEventName);
+                removeEvent(newEvent);
+                makeEvent();
+                ourUser.addHostEvent(newEvent);
+                userReference.setValue(ourUser);
+                if (newEvent.getPrivacy()){
+                    myRef = userDatabase.getReference("publicEvents/"+auth.getCurrentUser().getUid()+newEvent.hashCode()+"/");
+                    myRef.setValue(newEvent);
+                }
+                startActivity(new Intent(EditEventActivity.this,MainActivity.class));
+            }
+        });
+
+        removeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                newEvent.setName(originalEventName);
+                removeEvent(newEvent);
+                userReference.setValue(ourUser);
+                startActivity(new Intent(EditEventActivity.this,MyEventsActivity.class));
+            }
+        });
+
+        return;
+    }
+
+    private void setupDeps(){
+        userReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                ourUser = dataSnapshot.getValue(houseRulesUser.class);
+                newEvent = ourUser.getHostEventMap().get(originalEventName);
+                setUp();
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+
+        });
+    }
     @Override
     public void onStart() {
         super.onStart();

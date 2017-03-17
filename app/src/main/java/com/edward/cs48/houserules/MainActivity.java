@@ -100,8 +100,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.sign_out:
                 signOut();
                 return true;
-            case R.id.action_settings:
-                return true;
             default:
                 return true;
         }
