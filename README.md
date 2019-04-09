@@ -24,7 +24,7 @@ Far reaches:
 Scannable barcodes as tickets for parties
 Strong GPS features over simple maps locations
 
-Eddie: Edwardguardado@umail.ucsb.edu
+Eddie: edwardguardadoiii@gmail.com
 Daniel : dwchojnacki@umail.ucsb.edu
 Roberto: roberto.nares@gmail.com
 Giovanni: giovannidominguez21@gmail.com
